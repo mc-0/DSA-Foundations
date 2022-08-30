@@ -2,6 +2,7 @@ package datastructures;
 
 import java.util.Iterator;
 
+// Implementation of a dynamic array data structure
 public class DynamicArray<T> implements Iterable<T>{
 
     private T[] array;
