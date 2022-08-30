@@ -4,16 +4,16 @@
 | Example: | Statement | Binary Search | Loop   | Merge Sort   | 2 Nested Loop    | 3 Nested Loops   | Exhaustive Search |
 
 | DATA STRUCTURES |
-|-----------------|
-| Arrays          |
-| Linked Lists    |
-| Stacks          |
-| Queues          |
-| Heaps           |
-| Hash Tables     |
-| Trees           |
-| Tries           |
-| Graphs          |
+|--------------|
+| Arrays       |
+| Linked Lists |
+| Stacks       |
+| Queues       |
+| Heaps        |
+| Hash Tables  |
+| Trees        |
+| Tries        |
+| Graphs       |
 
 
 
