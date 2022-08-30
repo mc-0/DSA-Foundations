@@ -1,6 +1,6 @@
 |          | Constant  | Logarithmic   | Linear | Linearithmic | Quadratic        | Cubic            | Exponential       |
 |----------|-----------|---------------|--------|--------------|------------------|------------------|-------------------|
-| Big-O:   | O(1)      | O(logN)       | O(N)   | O(N logN)    | O(N<sup>2</sup>) | O(N<sup>3</sup>) | O(2<sup>N</sup>)  |
+| Big-O:   | O(1)      | O(log(n))     | O(n)   | O(nlog(n))   | O(n<sup>2</sup>) | O(n<sup>3</sup>) | O(2<sup>n</sup>)  |
 | Example: | Statement | Binary Search | Loop   | Merge Sort   | 2 Nested Loop    | 3 Nested Loops   | Exhaustive Search |
 
 | DATA STRUCTURES |
