@@ -72,7 +72,7 @@ public class SinglyLinkedList<T> {
 
         previousNode.next = newNode;
         newNode.next = currentNode;
-        
+
     }
 
     public void remove(T value){
