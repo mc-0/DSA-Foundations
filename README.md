@@ -17,23 +17,23 @@
 
 
 
-| ALGORITHMS           |
-|----------------------|
-| Bubble Sort          |
-| Insertion Sort       |
-| Selection Sort       |
-| Merge Sort           |
-| Quick Sort           |
-| Binary Search        |
-| DFS                  |
-| BFS                  |
-| Quick Select         |
-| Union Find           |
-| Topological Sort     |
-| Heap Sort            |
-| Dynamic Programming  |
-| Greedy Algorithms    |
-| Dijkstra's Two-Stack |
+| ALGORITHMS                        |
+|-----------------------------------|
+| :white_check_mark: Bubble Sort    |
+| :white_check_mark: Insertion Sort |
+| :white_check_mark: Selection Sort |
+| Merge Sort                        |
+| Quick Sort                        |
+| :white_check_mark: Binary Search  |
+| DFS                               |
+| BFS                               |
+| Quick Select                      |
+| Union Find                        |
+| Topological Sort                  |
+| Heap Sort                         |
+| Dynamic Programming               |
+| Greedy Algorithms                 |
+| Dijkstra's Two-Stack              |
 
 
 | PATTERNS                   |
