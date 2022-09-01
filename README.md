@@ -3,17 +3,17 @@
 | Big-O:   | O(1)      | O(log(n))     | O(n)   | O(nlog(n))   | O(n<sup>2</sup>) | O(n<sup>3</sup>) | O(2<sup>n</sup>)  |
 | Example: | Statement | Binary Search | Loop   | Merge Sort   | 2 Nested Loop    | 3 Nested Loops   | Exhaustive Search |
 
-| DATA STRUCTURES |
-|--------------|
-| Arrays       |
-| Linked Lists |
-| Stacks       |
-| Queues       |
-| Heaps        |
-| Hash Tables  |
-| Trees        |
-| Tries        |
-| Graphs       |
+| DATA STRUCTURES                 |
+|---------------------------------|
+| :white_check_mark: Arrays       |
+| :white_check_mark: Linked Lists |
+| :white_check_mark: Stacks       |
+| Queues                          |
+| Heaps                           |
+| Hash Tables                     |
+| Trees                           |
+| Tries                           |
+| Graphs                          |
 
 
 
