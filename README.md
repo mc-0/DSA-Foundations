@@ -23,7 +23,7 @@
 | :white_check_mark: Insertion Sort |
 | :white_check_mark: Selection Sort |
 | Merge Sort                        |
-| Quick Sort                        |
+| :white_check_mark: Quick Sort     |
 | :white_check_mark: Binary Search  |
 | DFS                               |
 | BFS                               |
