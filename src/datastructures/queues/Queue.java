@@ -47,6 +47,19 @@ public class Queue<T> {
         return size;
     }
 
+    public void printQueue(){
+        Node currentNode = end;
+        StringBuilder sb = new StringBuilder();
+        sb.append("(END) ");
+        while (currentNode.next != null){
+            sb.append("[" + currentNode.value + "] <-- ");
+            currentNode = currentNode.next;
+        }
+        sb.append("[" + currentNode.value + "] (START)");
+
+        System.out.println(sb);
+    }
+
 
 
     private class Node<T>{
