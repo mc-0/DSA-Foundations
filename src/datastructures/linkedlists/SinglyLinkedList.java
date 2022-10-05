@@ -98,8 +98,42 @@ public class SinglyLinkedList<T> {
     // becomes
     // 10 - 8 - 6 - 4 - 2
     public void reverse(){
-        Node next = null;
+        Node nextNode = null;
         Node current = head;
+        Node previous = null;
+
+        while (current != null){
+            nextNode = current.next;
+
+            current.next = previous;
+
+            previous = current;
+
+            current = nextNode;
+        }
+
+        head = previous;
+    }
+
+    // 2 - 4 - 6 - 8 - 10
+    // becomes
+    // 10 - 8 - 2 - 4 - 6
+    public void reverseMid(){
+
+        int count = 0;
+        Node endOfList = null;
+        Node midNode = head;
+        int midpoint = length / 2;
+
+        while (count != midpoint){
+            endOfList = midNode;
+            midNode = midNode.next;
+            count++;
+        }
+
+
+        Node next = null;
+        Node current = midNode;
         Node previous = null;
 
         while (current != null){
@@ -112,8 +146,10 @@ public class SinglyLinkedList<T> {
             current = next;
         }
 
-        head = previous;
+        endOfList.next = previous;
     }
+
+
 
 
 
