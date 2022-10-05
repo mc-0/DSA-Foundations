@@ -94,6 +94,27 @@ public class SinglyLinkedList<T> {
 
     }
 
+    // 2 - 4 - 6 - 8 - 10
+    // becomes
+    // 10 - 8 - 6 - 4 - 2
+    public void reverse(){
+        Node next = null;
+        Node current = head;
+        Node previous = null;
+
+        while (current != null){
+            next = current.next;
+
+            current.next = previous;
+
+            previous = current;
+
+            current = next;
+        }
+
+        head = previous;
+    }
+
 
 
 }

@@ -22,14 +22,11 @@
 | :white_check_mark: Bubble Sort    |
 | :white_check_mark: Insertion Sort |
 | :white_check_mark: Selection Sort |
-| Merge Sort                        |
+| :white_check_mark: Merge Sort     |
 | :white_check_mark: Quick Sort     |
 | :white_check_mark: Binary Search  |
-| DFS                               |
-| BFS                               |
 | Quick Select                      |
 | Union Find                        |
-| Topological Sort                  |
 | Heap Sort                         |
 | Dynamic Programming               |
 | Greedy Algorithms                 |
