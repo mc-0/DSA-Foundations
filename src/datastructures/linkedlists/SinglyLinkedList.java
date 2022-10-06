@@ -155,6 +155,42 @@ public class SinglyLinkedList<T> {
     }
 
 
+    public void reverseSubList(int p, int q){
+
+        Node startNode = null;
+        Node prefix = null;
+        Node postfix = null;
+
+        Node nodeCheck = head;
+        Node prevNode = null;
+        int count = 1;
+
+        while (count <= q){
+            if (count == p){
+                startNode = nodeCheck;
+                prefix = prevNode;
+            }
+            if (count == q){
+                postfix = nodeCheck.next;
+            }
+            prevNode = nodeCheck;
+            nodeCheck = nodeCheck.next;
+            count++;
+        }
+
+        Node current = startNode;
+        Node next;
+        Node previous = postfix;
+
+        while (current != postfix){
+            next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+        prefix.next = previous;
+    }
+
 
 
 
