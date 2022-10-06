@@ -98,20 +98,25 @@ public class SinglyLinkedList<T> {
     // becomes
     // 10 - 8 - 6 - 4 - 2
     public void reverse(){
-        Node nextNode = null;
-        Node current = head;
-        Node previous = null;
+        Node nextNode; // The next node in the linked list
+        Node current = head; // The current node that is to be reversed
+        Node previous = null; // The last node that was reversed
 
         while (current != null){
+            // Keep reference to the next node in line to be reverse
             nextNode = current.next;
 
-            current.next = previous;
+            // Set the current node's next pointer to previously reversed node
+            current.next = previous; // reversal step
 
+            // Update previous as the node that was just reversed
             previous = current;
 
+            // Set current to the next node (that was saved in the first operation)
             current = nextNode;
         }
 
+        // Return previous, which is the new head of the reversed linked list
         head = previous;
     }
 
