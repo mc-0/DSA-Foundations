@@ -15,20 +15,20 @@ public class UFClient {
     public static void main(String[] args) throws IOException {
 
 
-        Scanner scan = new Scanner(new File("C:\\Projects\\DSA\\src\\mediumUF.txt"));
+        Scanner scan = new Scanner(new File("C:\\Projects\\DSA\\src\\inputdata\\mediumUF.txt"));
         int n = Integer.parseInt(scan.nextLine());
-        QuickFind qf = new QuickFind(n);
+        QuickUnion qu = new QuickUnion(n);
         while (scan.hasNextLine()) {
 
             String[] ints = scan.nextLine().split(" ");
             int p = Integer.parseInt(ints[0]);
             int q = Integer.parseInt(ints[1]);
 
-            if (qf.find(p) == qf.find(q)) continue;
-            qf.union(p, q);
+            if (qu.find(p) == qu.find(q)) continue;
+            qu.union(p, q);
             System.out.println(p + " " + q);
         }
-        System.out.println(qf.getCount() + " components");
+        System.out.println(qu.getCount() + " components");
 
 
     }
