@@ -13,8 +13,8 @@
 | Hash Tables                     |                                | :white_check_mark: Binary Search        | Cyclic Sort                |
 | Trees                           |                                | Quick Select                            | In-Place LL Reversal       |
 | Graphs                          |                                | :white_check_mark: Quick Find           | Tree BFS                   |
-|                                 |                                | :white_check_mark: Quick Union          | Tree DFS                   |
-|                                 |                                | :white_check_mark: Weighted Quick Union | Two Heaps                  |
+| Sets                            |                                | :white_check_mark: Quick Union          | Tree DFS                   |
+| Tries                           |                                | :white_check_mark: Weighted Quick Union | Two Heaps                  |
 |                                 |                                | Greedy Algorithms                       | Subsets                    |
 |                                 |                                | Dijkstra's Two-Stack                    | Modified Binary Search     |
 |                                 |                                | Heap Sort                               | Bitwise XOR                |      
@@ -23,3 +23,5 @@
 |                                 |                                |                                         | 0/1 Knapsack (DP)          |      
 |                                 |                                |                                         | Topological Sort           |      
 |                                 |                                |                                         | Multi-Threaded             |
+|                                 |                                |                                         |                            |
+|                                 |                                |                                         |                            |

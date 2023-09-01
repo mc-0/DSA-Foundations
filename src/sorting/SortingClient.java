@@ -6,8 +6,9 @@ public class SortingClient {
 
     public static void main(String[] args) {
         int[] input = {8, 3, 7, 1, 9, 4, 2, 5, 10, 6};
-        ShellSort.sort(input);
+        int j = 5;
 
-        System.out.println(Arrays.toString(input));
+        System.out.println(input[j++]);
+        System.out.println(input[j]);
     }
 }
