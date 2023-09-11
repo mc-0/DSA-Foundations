@@ -6,21 +6,25 @@ package sorting;
 public class ShellSort {
 
     public static void sort(int[] arr) {
+        OperationCounter oc = new OperationCounter();
         int n = arr.length;
         int h = 1;
         while (h < n / 3) {
             h = 3 * h + 1;
         }
         while (h >= 1) {
+            System.out.println("H: " + h);
             for (int i = h; i < n; i++) {
                 for (int j = i; j >= h && arr[j] < arr[j - h]; j -= h) {
                     int temp = arr[j];
                     arr[j] = arr[j - h];
                     arr[j - h] = temp;
+                    oc.incrementOperation();
                 }
             }
             h = h / 3;
         }
+        oc.printOperations();
     }
 
 }
