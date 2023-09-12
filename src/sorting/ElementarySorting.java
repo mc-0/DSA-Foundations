@@ -3,6 +3,8 @@ package sorting;
 import java.util.Arrays;
 import java.util.List;
 
+import static sorting.SortingClient.ANSI_RED;
+
 /* The elementary sorting algorithms help to build a foundational understanding of sorting but aren't widely used.
 Insertion sort does however perform well in pne scenario: when dealing with a relatively small number of inputs where the data
 is nearly sorted
@@ -15,8 +17,11 @@ public class ElementarySorting {
     public static void bubbleSort(int[] arr){
         OperationCounter oc = new OperationCounter();
         for (int i = 0; i < arr.length - 1; i++){
+            System.out.println("I: " + i);
             for (int j = i + 1; j < arr.length; j++){
+                System.out.println("J: " + j);
                 if (arr[i] > arr[j]){
+                    oc.displayCurrentOperation(arr, i, j);
                     int temp = arr[i];
                     arr[i] = arr[j];
                     arr[j] = temp;
