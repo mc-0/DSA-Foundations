@@ -3,39 +3,12 @@ package sorting;
 
 
 
-*/
-/* The elementary sorting algorithms help to build a foundational understanding of sorting but aren't widely used.
+ The elementary sorting algorithms help to build a foundational understanding of sorting but aren't widely used.
 Insertion sort does however perform well in pne scenario: when dealing with a relatively small number of inputs where the data
 is nearly sorted
- *//*
+
 
 public class ElementarySorting {
-
-
-
-    // SELECTION SORT - Marks the current value as the minimum, which is updated is a lesser value is found.
-    // At the end, swaps the initial minimum with the new compared minimum.
-    // Runtime: O(n^2) Quadratic || Space: O(1) || Unstable Sort
-    // https://www.youtube.com/watch?v=cqh8nQwuKNE
-    public static void selectionSort(int[] arr){
-        OperationCounter oc = new OperationCounter();
-        int min, minIndex;
-        for (int i = 0; i < arr.length - 1; i++){
-            min = arr[i];
-            minIndex = i;
-            for (int j = i + 1; j < arr.length; j++){
-                if (arr[j] < min){
-                    min = arr[j];
-                    minIndex = j;
-                }
-            }
-            int temp = arr[i];
-            arr[i] = arr[minIndex];
-            arr[minIndex] = temp;
-            oc.incrementOperation();
-        }
-        oc.printOperations();
-    }
 
     // INSERTION SORT - Treats the first item in an array as sorted & continues to sort successive values to where they belong.
     // Runtime: O(n^2) Quadratic || Space: O(1) || Stable Sort
@@ -52,7 +25,7 @@ public class ElementarySorting {
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
                 j--;
-                oc.incrementOperation();
+
             }
         }
         oc.printOperations();

@@ -4,15 +4,14 @@ package sorting;
 import sorting.util.InitInput;
 
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 
 public class SortingClient {
 
     public static void main(String[] args) throws FileNotFoundException {
         int[] array = InitInput.populateArray("src\\inputdata\\randomInts.txt");
-        System.out.println(array.length);
-        BubbleSort bubbleSort = new BubbleSort(array);
-        bubbleSort.sort();
-        bubbleSort.printList();
+        SelectionSort.sort(array);
+        System.out.println(Arrays.toString(array));
     }
 
 
