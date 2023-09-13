@@ -1,6 +1,4 @@
-package sorting;
-
-import static sorting.SortingClient.ANSI_RED;
+package sorting.util;
 
 public class OperationCounter {
 
@@ -18,7 +16,5 @@ public class OperationCounter {
         System.out.println("Swaps: " + numSwaps);
     }
 
-    public void displayCurrentOperation(int[] arr, int a, int b) {
-        System.out.println("SWAPPING: " + ANSI_RED + arr[a] + " || " + arr[b] );
-    }
+
 }

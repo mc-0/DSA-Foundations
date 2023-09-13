@@ -1,4 +1,7 @@
 package sorting;
+
+import sorting.util.OperationCounter;
+
 // Builds on insertion sort, but starts by sorting fixed width gaps in the array (hth value)
 // Gaps decrease on iteration, when reaching 1, typical insertion sort applies
 // Worst case O(n^2) || Avg. O(n^3/2)
@@ -6,7 +9,6 @@ package sorting;
 public class ShellSort {
 
     public static void sort(int[] arr) {
-        OperationCounter oc = new OperationCounter();
         int n = arr.length;
         int h = 1;
         while (h < n / 3) {
@@ -19,12 +21,10 @@ public class ShellSort {
                     int temp = arr[j];
                     arr[j] = arr[j - h];
                     arr[j - h] = temp;
-                    oc.incrementOperation();
                 }
             }
             h = h / 3;
         }
-        oc.printOperations();
     }
 
 }
