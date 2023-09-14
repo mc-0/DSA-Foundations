@@ -3,50 +3,55 @@ package sorting;
 // Time: O(n log n)
 // Space: O(n)
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class MergeSort {
 
-    public static void sort(int[] arr){
-        mergesort(arr, new int[arr.length], 0, arr.length - 1);
-    }
 
-    public static void mergesort(int[] arr, int[] temp, int leftStart, int rightEnd){
-        if (leftStart >= rightEnd){
-            return;
-        }
-        int middle = (leftStart + rightEnd) / 2;
-        mergesort(arr, temp, leftStart, middle);
-        mergesort(arr, temp, middle + 1, rightEnd);
-        mergeHalves(arr, temp, leftStart, rightEnd);
+    public static void resursiveSort(int[] arr, int[] temp, int leftStart, int rightEnd){
+
 
     }
 
-    public static void mergeHalves(int[] arr, int[] temp, int leftStart, int rightEnd){
-        int leftEnd = (rightEnd + leftStart) / 2;
-        int rightStart = leftEnd + 1;
-        int size = rightEnd - leftStart + 1;
+    public static void recursiveMerge(int[] arr, int[] temp, int leftStart, int rightEnd) {
 
-        int left = leftStart;
-        int right = rightStart;
-        int index = leftStart;
+    }
 
-        while (left <= leftEnd && right <= rightEnd){
-            if (arr[left] <= arr[right]){
-                temp[index] = arr[left];
-                left++;
+
+    public static void iterativeSort(int[]a){
+        int n = a.length;
+        for (int len = 1; len < n; len *= 2) {
+            for (int lo = 0; lo < n - len; lo += len + len) {
+                iterativeMerge(a, lo, lo + len - 1, Math.min(lo + len +len - 1, n - 1));
             }
-            else{
-                temp[index] = arr[right];
-                right++;
-            }
-            index++;
         }
+    }
 
-        System.arraycopy(arr, left, temp, index, leftEnd - left + 1);
-        System.arraycopy(arr, right, temp, index, rightEnd - right + 1);
-        System.arraycopy(temp, leftStart, arr, leftStart, size);
+
+    public static void iterativeMerge(int[] a, int lo, int mid, int hi) {
+        int[] aux = new int[a.length];
+
+        int i = lo, j = mid + 1;
+
+        for (int k = lo; k <= hi; k++) {
+            aux[k] = a[k];
+        }
+        System.out.println(Arrays.toString(aux));
+
+        for (int k = lo; k <= hi; k++) {
+            if (i > mid) {
+                a[k] = aux[j++];
+            }
+            else if (j > hi) {
+                a[k] = aux[i++];
+            }
+            else if (aux[j] < aux[i]) {
+                a[k] = aux[j++];
+            }
+            else {
+                a[k] = aux[i++];
+            }
+        }
     }
 
 
