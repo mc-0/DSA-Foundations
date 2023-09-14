@@ -2,9 +2,10 @@ package sorting.util;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class InitInput {
+public class CollectionUtil {
 
     public static int[] populateArray(String filename) throws FileNotFoundException {
         Scanner scanner = new Scanner(new File(filename));
@@ -14,5 +15,16 @@ public class InitInput {
             list[i++] = scanner.nextInt();
         }
         return list;
+    }
+
+    public static void printFormattedArray(int[] a) {
+        StringBuilder sb = new StringBuilder();
+        for (int j : a) {
+            sb.append(j).append(" ");
+            if (j % 30 == 0) {
+                sb.append("\n");
+            }
+        }
+        System.out.println(sb);
     }
 }
