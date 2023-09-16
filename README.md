@@ -19,8 +19,8 @@
 |                                 |                                | Dijkstra's Two-Stack                    | Modified Binary Search     |
 |                                 |                                | Heap Sort                               | Bitwise XOR                |      
 |                                 |                                | Dynamic Programming                     | Top 'K' Elements           |      
-|                                 |                                |                                         | K-Way Merge                |      
-|                                 |                                |                                         | 0/1 Knapsack (DP)          |      
+|                                 |                                | Bucket Sort                             | K-Way Merge                |      
+|                                 |                                | Radix Sort                              | 0/1 Knapsack (DP)          |      
 |                                 |                                |                                         | Topological Sort           |      
 |                                 |                                |                                         | Multi-Threaded             |
 |                                 |                                |                                         |                            |
