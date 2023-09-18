@@ -1,5 +1,9 @@
 package sorting;
 
+import sorting.util.Swapper;
+
+import java.util.Arrays;
+
 // Best case time complexity => O(n log n). Pivot falls in the median. Won't necessarily happen (maybe randomly).
 // Worst case time complexity => O(n^2). Happens when the list is already sorted.
 // >>> Mitigate the worst case by choosing the middle element or random element as the pivot.
@@ -16,23 +20,21 @@ public class QuickSort {
         sort(arr, index, right);
     }
 
-    private static int partition(int[] arr, int left, int right, int pivot){
-        while (left <= right){
-            while (arr[left] < pivot){
-                left++;
+    private static int partition(int[] arr, int start, int end, int pivot){
+        while (start <= end){
+            while (arr[start] < pivot){
+                start++;
             }
-            while (arr[right] > pivot){
-                right--;
+            while (arr[end] > pivot){
+                end--;
             }
 
-            if (left <= right){
-                int temp = arr[left];
-                arr[left] = arr[right];
-                arr[right] = temp;
-                left++;
-                right--;
+            if (start <= end){
+                Swapper.swap(arr, start, end);
+                start++;
+                end--;
             }
         }
-        return left;
+        return start;
     }
 }
