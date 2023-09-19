@@ -1,6 +1,7 @@
 package sorting;
 
 import sorting.util.OperationCounter;
+import sorting.util.Swapper;
 
 // Builds on insertion sort, but starts by sorting fixed width gaps in the array (hth value)
 // Gaps decrease on iteration, when reaching 1, typical insertion sort applies
@@ -18,9 +19,7 @@ public class ShellSort {
             System.out.println("H: " + h);
             for (int i = h; i < n; i++) {
                 for (int j = i; j >= h && arr[j] < arr[j - h]; j -= h) {
-                    int temp = arr[j];
-                    arr[j] = arr[j - h];
-                    arr[j - h] = temp;
+                    Swapper.swap(arr, j, j - h);
                 }
             }
             h = h / 3;
