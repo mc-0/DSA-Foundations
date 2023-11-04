@@ -6,17 +6,24 @@ public class PracticeClient {
 
 
     public static void main(String[] args) {
-        int x = 0;
+        String s = "A man, a plan, a canal, Panama!";
 
-        if (x >= 0) {
-            try {
-                System.out.println("TRY");
-                System.exit(0);
+        int start = 0;
+        int end = s.length() - 1;
+
+        while (start <= end) {
+            char a = s.charAt(start);
+            char b = s.charAt(end);
+
+            if (!Character.isAlphabetic(a)) {
+                start++;
+                continue;
             }
-            finally {
-                System.out.println("FINALLY");
-            }
+
+            
         }
+
+
 
     }
 

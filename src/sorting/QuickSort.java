@@ -2,8 +2,6 @@ package sorting;
 
 import sorting.util.Swapper;
 
-import java.util.Arrays;
-
 // Best case time complexity => O(n log n). Pivot falls in the median. Won't necessarily happen (maybe randomly).
 // Worst case time complexity => O(n^2). Happens when the list is already sorted.
 // >>> Mitigate the worst case by choosing the middle element or random element as the pivot.
