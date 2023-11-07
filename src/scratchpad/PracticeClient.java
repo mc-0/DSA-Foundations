@@ -1,27 +1,18 @@
 package scratchpad;
 
-import java.util.HashSet;
+import patterns.slidingwindow.SlidingWindow;
 
 public class PracticeClient {
 
 
     public static void main(String[] args) {
-        String s = "A man, a plan, a canal, Panama!";
 
-        int start = 0;
-        int end = s.length() - 1;
+        int[] nums = {1,1,1,1,2,2,2,2};
 
-        while (start <= end) {
-            char a = s.charAt(start);
-            char b = s.charAt(end);
+        SlidingWindow sw = new SlidingWindow();
+        int count = sw.numIdenticalPairs(nums);
 
-            if (!Character.isAlphabetic(a)) {
-                start++;
-                continue;
-            }
-
-            
-        }
+        System.out.println("Good Pairs: " + count);
 
 
 
