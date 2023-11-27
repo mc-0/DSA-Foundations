@@ -1,6 +1,8 @@
 package casestudies.unionfind;
 
-public class WeightedQuickUnion implements UF{
+import java.awt.*;
+
+public class WeightedQuickUnion implements UF{;
 
     private int[] id;
     private int[] sz;
