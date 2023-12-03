@@ -22,4 +22,27 @@ public class TwoPointers {
         }
         return true;
     }
+
+    public static int[] targetSum(int[] input, int target) {
+        int[] answer = {-1,-1};
+        int start = 0;
+        int end = input.length - 1;
+
+        while (start < end) {
+            if (input[start] + input[end] == target) {
+                answer[0] = start;
+                answer[1] = end;
+                return answer;
+            }
+            else {
+                if ((input[start] + input[end]) < target) {
+                    start++;
+                }
+                else {
+                    end--;
+                }
+            }
+        }
+        return answer;
+    }
 }
