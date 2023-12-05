@@ -1,5 +1,7 @@
 package patterns.twopointers;
 
+import java.util.Arrays;
+
 public class TwoPointers {
 
     public static boolean simplePalimdrome(String s) {
@@ -44,5 +46,48 @@ public class TwoPointers {
             }
         }
         return answer;
+    }
+
+    public static int moveDuplicates(int[] nums) {
+        int nextNonDuplicate = 1;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[nextNonDuplicate - 1] != nums[i]) {
+                nums[nextNonDuplicate] = nums[i];
+                nextNonDuplicate++;
+            }
+        }
+        return nextNonDuplicate;
+    }
+
+    public static int removeKeyFromUnsorted(int[] nums, int key) {
+        int replaceable = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != key) {
+                nums[replaceable] = nums[i];
+                replaceable++;
+            }
+        }
+        System.out.println(Arrays.toString(nums));
+        return replaceable;
+    }
+
+    public static int[] squareSortedArray(int[] nums) {
+        int[] squared = new int[nums.length];
+        int start = 0, end = nums.length - 1;
+
+        for (int i = nums.length - 1; i >= 0 ; i--) {
+            int startSquared = (nums[start] * nums[start]);
+            int endSquared = (nums[end] * nums[end]);
+
+            if (startSquared >= endSquared) {
+                squared[i] = startSquared;
+                start++;
+            }
+            else {
+                squared[i] = endSquared;
+                end--;
+            }
+        }
+        return squared;
     }
 }

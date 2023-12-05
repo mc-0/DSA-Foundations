@@ -8,9 +8,9 @@ public class PracticeClient {
 
 
     public static void main(String[] args) {
-        int[] nums = {2,5,9,11};
+        int[] nums = {-2,-1,0,2,3};
 
-        int[] r = TwoPointers.targetSum(nums, 11);
+        int[] r = TwoPointers.squareSortedArray(nums);
         System.out.println(Arrays.toString(r));
     }
 
