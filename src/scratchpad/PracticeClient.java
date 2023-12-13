@@ -8,8 +8,8 @@ public class PracticeClient {
 
 
     public static void main(String[] args) {
-        System.out.println(TwoPointers.allTriplatesSumToZero(
-                new int[] { -3, 0, 1, 2, -1, 1, -2 }));
+        System.out.println(TwoPointers.searchTripletsLessWithList(
+                new int[] { -1, 4, 2, 1, 3 }, 5));
     }
 
 }

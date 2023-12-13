@@ -156,4 +156,56 @@ public class TwoPointers {
         return targetSum - smallestDifference;
     }
 
+    public static int searchTripletLessThanTarget(int[] arr, int target) {
+        if (arr == null || arr.length < 3)
+            throw new IllegalArgumentException();
+
+        Arrays.sort(arr);
+        int count = 0;
+        for (int i = 0; i < arr.length - 2; i++) {
+            count += searchPairLessThanTarget(arr, target - arr[i], i);
+        }
+        return count;
+    }
+
+    private static int searchPairLessThanTarget(int[] arr, int targetSum, int first) {
+        int count = 0;
+        int left = first + 1, right = arr.length - 1;
+        while (left < right) {
+            if (arr[left] + arr[right] < targetSum) { // found the triplet
+                // since arr[right] >= arr[left], therefore, we can replace arr[right] by any
+                // number between left and right to get a sum less than the target sum
+                count += right - left;
+                left++;
+            } else {
+                right--; // we need a pair with a smaller sum
+            }
+        }
+        return count;
+    }
+
+    public static List<List<Integer>> searchTripletsLessWithList(int[] arr, int target) {
+        Arrays.sort(arr);
+        List<List<Integer>> triplets = new ArrayList<>();
+        for (int i = 0; i < arr.length - 2; i++) {
+            searchPairLessWithList(arr, target - arr[i], i, triplets);
+        }
+        return triplets;
+    }
+
+    private static void searchPairLessWithList(int[] arr, int targetSum, int first, List<List<Integer>> triplets) {
+        int left = first + 1, right = arr.length - 1;
+        while (left < right) {
+            if (arr[left] + arr[right] < targetSum) { // found the triplet
+                // since arr[right] >= arr[left], therefore, we can replace arr[right] by any
+                // number between left and right to get a sum less than the target sum
+                for (int i = right; i > left; i--)
+                    triplets.add(Arrays.asList(arr[first], arr[left], arr[i]));
+                left++;
+            } else {
+                right--; // we need a pair with a smaller sum
+            }
+        }
+    }
+
 }
