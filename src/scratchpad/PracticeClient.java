@@ -8,8 +8,11 @@ public class PracticeClient {
 
 
     public static void main(String[] args) {
-        System.out.println(TwoPointers.searchTripletsLessWithList(
-                new int[] { -1, 4, 2, 1, 3 }, 5));
+
+        int[] testArr = new int[] { 1,0,2,1,0 };
+        TwoPointers.dutchNationalFlag(testArr);
+
+        System.out.printf(Arrays.toString(testArr));
     }
 
 }

@@ -1,5 +1,7 @@
 package patterns.twopointers;
 
+import patterns.util.Helper;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -246,6 +248,26 @@ public class TwoPointers {
 
         // Return the result.
         return result;
+    }
+
+    public static void dutchNationalFlag(int[] arr) {
+        int i = 0, low = 0;
+        int high = arr.length - 1;
+
+        while (i <= high) {
+            if (arr[i] == 0) {
+                Helper.swap(arr, i, low);
+                i++;
+                low++;
+            }
+            else if (arr[i] == 1) {
+                i++;
+            }
+            else {
+                Helper.swap(arr, i, high);
+                high--;
+            }
+        }
     }
 
 }
