@@ -2,6 +2,7 @@ package scratchpad;
 
 import datastructures.linkedlists.ListNode;
 import patterns.fastslowpointers.CyclicLinkedList;
+import patterns.fastslowpointers.MiddleLinkedList;
 
 public class PracticeClient {
 
@@ -16,8 +17,8 @@ public class PracticeClient {
         n2.next = n3;
         n3.next = n4;
         n4.next = n5;
-        n5.next = n3;
-        System.out.println(CyclicLinkedList.findCycle(n1));
+//        n5.next = n3;
+        System.out.println(MiddleLinkedList.findMiddle(n1).value);
 
     }
 
