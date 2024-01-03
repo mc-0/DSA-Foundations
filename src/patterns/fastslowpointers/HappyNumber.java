@@ -21,7 +21,6 @@ public class HappyNumber {
             squaredSum += (currentDigit * currentDigit);
             num /= 10;
         }
-        System.out.println(squaredSum);
         return squaredSum;
     }
 
