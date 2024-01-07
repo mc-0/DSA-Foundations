@@ -42,16 +42,6 @@ public class PalindromeList {
         return prev;
     }
 
-    public static void printList(ListNode head) {
-        StringBuilder sb = new StringBuilder();
-        while (head != null) {
-            sb.append(head.value);
-            head = head.next;
-            if (head != null) {
-                sb.append(" -> ");
-            }
-        }
-        System.out.println(sb);
-    }
+
 
 }
