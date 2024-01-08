@@ -21,7 +21,7 @@ public class RearrangeLinkedList {
 
             temp = secondHalf.next;
             secondHalf.next = firstHalf;
-            secondHalf = temp
+            secondHalf = temp;
         }
 
         if (firstHalf != null) {
