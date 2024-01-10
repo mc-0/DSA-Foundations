@@ -1,8 +1,23 @@
 package patterns.cyclicsort;
 
+import patterns.util.Helper;
+
 public class SimpleCyclicSort {
 
-    public static void sort(int[] arr) {
+    public static void sort(int[] nums) {
+        int i = 0;
+        while (i < nums.length) {
+            int j = nums[i] - 1;
+            if (nums[i] != nums[j]) {
+                Helper.swap(nums, i, j);
+            }
+            else {
+                i++;
+            }
+        }
+    }
+
+    public static void bruteForceSort(int[] arr) {
         int current = 0;
         int scan = current;
 

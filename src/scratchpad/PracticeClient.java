@@ -17,13 +17,10 @@ public class PracticeClient {
 
     public static void main(String[] args) {
 
-        Interval[] input1 = new Interval[] {
-                new Interval(6, 7),
-                new Interval(2, 4),
-                new Interval(8, 12)
-                };
-
-//        System.out.println(ConflictingAppointments.findConflicts(input1));
+        int[] nums = {3, 2, 1, 4, 7};
+        System.out.println(Arrays.toString(nums));
+        SimpleCyclicSort.sort(nums);
+        System.out.println(Arrays.toString(nums));
 
 
     }
