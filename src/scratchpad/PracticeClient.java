@@ -1,25 +1,16 @@
 package scratchpad;
 
-import datastructures.linkedlists.ListNode;
-import patterns.cyclicsort.SimpleCyclicSort;
-import patterns.fastslowpointers.FastSlowUtil;
-import patterns.fastslowpointers.HappyNumber;
-import patterns.fastslowpointers.PalindromeList;
-import patterns.mergeintervals.ConflictingAppointments;
-import patterns.mergeintervals.IntersectIntervals;
-import patterns.mergeintervals.Interval;
+import patterns.cyclicsort.FindMissingNumber;
 
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 
 public class PracticeClient {
 
     public static void main(String[] args) {
 
-        int[] nums = {3, 2, 1, 4, 7};
+        int[] nums = {8, 3, 5, 2, 4, 6, 0, 1};
         System.out.println(Arrays.toString(nums));
-        SimpleCyclicSort.sort(nums);
+        System.out.println(FindMissingNumber.findMissingNumber(nums));
         System.out.println(Arrays.toString(nums));
 
 
