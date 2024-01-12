@@ -37,6 +37,9 @@ public class FindDuplicateNumber {
                 return nums[k];
             }
         }
+        if (nums[nums.length - 1] != nums.length) {
+            return nums[nums.length - 1];
+        }
         return -1;
     }
 }

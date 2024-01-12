@@ -10,7 +10,7 @@ public class PracticeClient {
 
     public static void main(String[] args) {
 
-        int[] nums = {2,1,3,3,5,4};
+        int[] nums = {1,3,4,2,2};
         System.out.println(Arrays.toString(nums));
         System.out.println(FindDuplicateNumber.findNumber(nums));
         System.out.println(Arrays.toString(nums));
