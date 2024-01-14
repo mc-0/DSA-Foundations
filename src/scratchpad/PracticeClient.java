@@ -1,6 +1,9 @@
 package scratchpad;
 
+import datastructures.linkedlists.ListNode;
 import patterns.cyclicsort.*;
+import patterns.reverselinkedlist.ReverseSubList;
+import patterns.util.Helper;
 
 import java.util.Arrays;
 
@@ -8,10 +11,23 @@ public class PracticeClient {
 
     public static void main(String[] args) {
 
-        int[] nums = {7,6,3,1,4,5};
-        System.out.println(Arrays.toString(nums));
-        System.out.println(FindSmallestMissingPositiveNumber.findNumber(nums));
-        System.out.println(Arrays.toString(nums));
+        ListNode n1 = new ListNode<>(1);
+        ListNode n2 = new ListNode<>(2);
+        ListNode n3 = new ListNode<>(3);
+        ListNode n4 = new ListNode<>(4);
+        ListNode n5 = new ListNode<>(5);
+        ListNode n6 = new ListNode<>(6);
+
+        n1.next = n2;
+        n2.next = n3;
+        n3.next = n4;
+        n4.next = n5;
+        n5.next = n6;
+        n6.next = null;
+
+        ListNode answer = ReverseSubList.reverse(n1, 2, 4);
+
+        Helper.printList(answer);
 
 
     }
