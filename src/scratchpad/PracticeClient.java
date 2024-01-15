@@ -2,6 +2,7 @@ package scratchpad;
 
 import datastructures.linkedlists.ListNode;
 import patterns.cyclicsort.*;
+import patterns.reverselinkedlist.ReverseEveryKElementSubList;
 import patterns.reverselinkedlist.ReverseSubList;
 import patterns.util.Helper;
 
@@ -25,7 +26,7 @@ public class PracticeClient {
         n5.next = n6;
         n6.next = null;
 
-        ListNode answer = ReverseSubList.reverse(n1, 2, 4);
+        ListNode answer = ReverseEveryKElementSubList.reverse(n1, 4);
 
         Helper.printList(answer);
 
