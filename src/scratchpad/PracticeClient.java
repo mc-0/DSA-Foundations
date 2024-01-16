@@ -27,10 +27,13 @@ public class PracticeClient {
         n5.next = n6;
         n6.next = null;
 
-        ListNode answer = ReverseAlternatingKElementSubList.reverse(n1, 2);
+//        ListNode answer = ReverseAlternatingKElementSubList.reverse(n1, 2);
+//
+//        Helper.printList(answer);
 
-        Helper.printList(answer);
 
+        int rot = 3;
+        System.out.println(6 % 6);
 
     }
 
