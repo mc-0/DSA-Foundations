@@ -5,6 +5,8 @@ import java.util.Stack;
 
 public class NextGreatestElement {
 
+    // Time: O(n)
+    // Space: O(n)
     public int[] findNext(int[] nums1, int[] nums2) {
         int[] answer = new int[nums1.length];
         HashMap<Integer, Integer> hm = new HashMap<>();
@@ -17,6 +19,8 @@ public class NextGreatestElement {
             stack.push(nums2[i]);
         }
 
+        // USE: nums1[i] = map.getOrDefault(nums1[i], -1); line 27
+        // Instead of using this loop***
         while (!stack.isEmpty()) {
             hm.put(stack.pop(), -1);
         }
