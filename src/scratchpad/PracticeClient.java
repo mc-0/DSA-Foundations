@@ -10,6 +10,7 @@ import patterns.reverselinkedlist.ReverseAlternatingKElementSubList;
 import patterns.reverselinkedlist.ReverseEveryKElementSubList;
 import patterns.reverselinkedlist.ReverseSubList;
 import patterns.stacks.BalancedParentheses;
+import patterns.stacks.StackReverseString;
 import patterns.util.Helper;
 
 import java.util.Arrays;
@@ -17,10 +18,10 @@ import java.util.Arrays;
 public class PracticeClient {
 
     public static void main(String[] args) {
-        String f = "{[(])}";
+        String f = "HYELLO!!";
 
 
-        System.out.println(BalancedParentheses.checkIfBalanced(f));
+        System.out.println(StackReverseString.reverse(f));
     }
 
 }
