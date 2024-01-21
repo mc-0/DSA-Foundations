@@ -2,6 +2,7 @@ package scratchpad;
 
 import datastructures.linkedlists.ListNode;
 import patterns.cyclicsort.*;
+import patterns.hashmaps.FirstNonRepeatChar;
 import patterns.monotonicstack.DailyTemperatures;
 import patterns.monotonicstack.RemoveAdjacentDuplicatesFromString;
 import patterns.monotonicstack.RemoveAdjacentDuplicatesII;
@@ -20,9 +21,9 @@ import java.util.Arrays;
 public class PracticeClient {
 
     public static void main(String[] args) {
-        String s1 = "/a/b//c//d/.././e/./././f/";
+        String s = "abab";
 
-        System.out.println(SimplifyFilePath.simplify(s1));
+        System.out.println(FirstNonRepeatChar.find(s));
     }
 
 }
