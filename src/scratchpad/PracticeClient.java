@@ -3,6 +3,7 @@ package scratchpad;
 import datastructures.linkedlists.ListNode;
 import patterns.cyclicsort.*;
 import patterns.hashmaps.FirstNonRepeatChar;
+import patterns.hashmaps.LargestUniqueNumber;
 import patterns.monotonicstack.DailyTemperatures;
 import patterns.monotonicstack.RemoveAdjacentDuplicatesFromString;
 import patterns.monotonicstack.RemoveAdjacentDuplicatesII;
@@ -21,9 +22,9 @@ import java.util.Arrays;
 public class PracticeClient {
 
     public static void main(String[] args) {
-        String s = "abab";
+        int[] a = {9, 9, 8, 8, 7, 7};
 
-        System.out.println(FirstNonRepeatChar.find(s));
+        System.out.println(LargestUniqueNumber.findLargest(a));
     }
 
 }
