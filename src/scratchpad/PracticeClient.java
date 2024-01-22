@@ -5,6 +5,7 @@ import patterns.cyclicsort.*;
 import patterns.hashmaps.FirstNonRepeatChar;
 import patterns.hashmaps.LargestUniqueNumber;
 import patterns.hashmaps.LongestPalindrome;
+import patterns.hashmaps.RansomNote;
 import patterns.monotonicstack.DailyTemperatures;
 import patterns.monotonicstack.RemoveAdjacentDuplicatesFromString;
 import patterns.monotonicstack.RemoveAdjacentDuplicatesII;
@@ -24,7 +25,7 @@ public class PracticeClient {
 
     public static void main(String[] args) {
 
-        System.out.println(LongestPalindrome.find("aaaaaabc"));
+        System.out.println(RansomNote.makeNote("hello", "hellworld"));
     }
 
 }
