@@ -4,6 +4,7 @@ import datastructures.linkedlists.ListNode;
 import patterns.cyclicsort.*;
 import patterns.hashmaps.FirstNonRepeatChar;
 import patterns.hashmaps.LargestUniqueNumber;
+import patterns.hashmaps.LongestPalindrome;
 import patterns.monotonicstack.DailyTemperatures;
 import patterns.monotonicstack.RemoveAdjacentDuplicatesFromString;
 import patterns.monotonicstack.RemoveAdjacentDuplicatesII;
@@ -22,9 +23,8 @@ import java.util.Arrays;
 public class PracticeClient {
 
     public static void main(String[] args) {
-        int[] a = {9, 9, 8, 8, 7, 7};
 
-        System.out.println(LargestUniqueNumber.findLargest(a));
+        System.out.println(LongestPalindrome.find("aaaaaabc"));
     }
 
 }
