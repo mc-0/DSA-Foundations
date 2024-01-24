@@ -2,6 +2,8 @@ package patterns.slidingwindow;
 
 public class SmallestSubarrayWithGreaterSum {
 
+    // Time: O(n)
+    // Space: O(n)
     public static int findSum(int[] arr, int S) {
         int windowSum = 0, smallest = Integer.MAX_VALUE;
         int windowStart = 0;

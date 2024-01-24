@@ -24,8 +24,10 @@ import java.util.Arrays;
 public class PracticeClient {
 
     public static void main(String[] args) {
+        // String: .toCharArray(), .split()
+        // Math: .min(), .max(), etc.
+        // Integer: Constants (MIN_VALUE, MAX_VALUE)
 
-        System.out.println(RansomNote.makeNote("hello", "hellworld"));
     }
 
 }
