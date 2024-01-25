@@ -18,6 +18,7 @@ import patterns.stacks.BalancedParentheses;
 import patterns.stacks.ConvertDecimalToBinary;
 import patterns.stacks.SimplifyFilePath;
 import patterns.stacks.StackReverseString;
+import patterns.treebfs.BinaryTreeLevelAverages;
 import patterns.treebfs.BinaryTreeLevelOrderTraversal;
 import patterns.util.Helper;
 
@@ -26,14 +27,15 @@ import java.util.Arrays;
 public class PracticeClient {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(12);
+        TreeNode root = new TreeNode(17);
         root.left = new TreeNode(7);
-        root.right = new TreeNode(1);
-        root.left.left = new TreeNode(9);
+        root.right = new TreeNode(21);
+        root.left.left = new TreeNode(91);
         root.right.left = new TreeNode(10);
-        root.right.right = new TreeNode(5);
+        root.right.right = new TreeNode(58);
 
-        System.out.println(BinaryTreeLevelOrderTraversal.traverse(root));
+        System.out.println(BinaryTreeLevelAverages.findAverages(root));
+
 
         }
     }
