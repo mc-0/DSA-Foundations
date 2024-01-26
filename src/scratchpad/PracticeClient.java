@@ -36,7 +36,8 @@ public class PracticeClient {
 
 
 
-        System.out.println(FindTreeMinimumDepth.getDepth(root));
+//        System.out.println(FindTreeMinimumDepth.getDepth(root));
+
 
 
         }
