@@ -22,6 +22,7 @@ import patterns.treebfs.BinaryTreeLevelAverages;
 import patterns.treebfs.BinaryTreeLevelOrderTraversal;
 import patterns.treebfs.FindTreeMinimumDepth;
 import patterns.treedfs.BinaryTreePathSum;
+import patterns.treedfs.SumOfPathNumbers;
 import patterns.util.Helper;
 
 import java.util.Arrays;
@@ -35,13 +36,12 @@ public class PracticeClient {
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.left.left = new TreeNode(4);
-        root.left.right = new TreeNode(5);
+        root.left.right = new TreeNode(1);
         root.right = new TreeNode(3);
+        root.right.left = new TreeNode(3);
+        root.right.right = new TreeNode(2);
 
-Queue<Integer> q = new LinkedList<>();
-
-//        System.out.println(FindTreeMinimumDepth.getDepth(root));
-        BinaryTreePathSum.hasPath(root, 2);
+        System.out.println(SumOfPathNumbers.getTreeSum(root));
 
 
         }
