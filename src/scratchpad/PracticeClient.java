@@ -21,9 +21,13 @@ import patterns.stacks.StackReverseString;
 import patterns.treebfs.BinaryTreeLevelAverages;
 import patterns.treebfs.BinaryTreeLevelOrderTraversal;
 import patterns.treebfs.FindTreeMinimumDepth;
+import patterns.treedfs.BinaryTreePathSum;
 import patterns.util.Helper;
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
 
 public class PracticeClient {
 
@@ -34,10 +38,10 @@ public class PracticeClient {
         root.left.right = new TreeNode(5);
         root.right = new TreeNode(3);
 
-
+Queue<Integer> q = new LinkedList<>();
 
 //        System.out.println(FindTreeMinimumDepth.getDepth(root));
-
+        BinaryTreePathSum.hasPath(root, 2);
 
 
         }
