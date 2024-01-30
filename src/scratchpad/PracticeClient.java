@@ -3,6 +3,11 @@ package scratchpad;
 import datastructures.trees.TreeNode;
 import patterns.treedfs.PathWithGivenSequence;
 
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
+
 public class PracticeClient {
 
     public static void main(String[] args) {
@@ -13,9 +18,6 @@ public class PracticeClient {
         root.right = new TreeNode(3);
         root.right.left = new TreeNode(3);
         root.right.right = new TreeNode(2);
-
-        int[] s = {1,3,2};
-        System.out.println(PathWithGivenSequence.hasSequence(root, s));
 
 
         }

@@ -7,6 +7,8 @@ import java.util.Map;
 
 public class CountPathsForPrefixSum {
 
+    //Time: O(n)
+    //Space: O(n)
     public static int countPaths(TreeNode root, int targetSum) {
         // A map that stores the number of times a prefix sum has occurred so far.
         Map<Integer, Integer> map = new HashMap<>();

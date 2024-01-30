@@ -6,6 +6,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ListIterator;
 
+//Time: O(n^2) Worst case - traverse each node once, but also iterate all node in the path each time
+//Space: O(n)
 public class CountSumsForPath {
 
     public static int countPathsForSum(TreeNode root, int S) {
