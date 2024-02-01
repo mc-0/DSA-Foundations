@@ -20,42 +20,43 @@ public class PracticeClient {
         graph.addEdge(4, 5);
         graph.addEdge(5, 6);
 
-        System.out.print("Vertices: ");
-        for (int vertex : graph.getVertices()) {
-            System.out.print(vertex + " ");
-        }
-        System.out.println();
-
-        System.out.print("Edges: ");
-        for (Pair<Integer, Integer> edge : graph.getEdges()) {
-            System.out.print("(" + edge.getFirst() + ", " + edge.getSecond() + ") ");
-        }
-        System.out.println();
-
-        System.out.print("Neighbors of vertex 1: ");
-        for (int neighbor : graph.getNeighbors(1)) {
-            System.out.print(neighbor + " ");
-        }
-        System.out.println();
-
-        System.out.println("Is vertex 1 adjacent to vertex 2? " + graph.isAdjacent(1, 2));
-
-        graph.removeEdge(1, 2);
-        graph.removeVertex(3);
-
-        System.out.println("After removing some edges and vertices:");
-
-        System.out.print("Vertices: ");
-        for (int vertex : graph.getVertices()) {
-            System.out.print(vertex + " ");
-        }
-        System.out.println();
-
-        System.out.print("Edges: ");
-        for (Pair<Integer, Integer> edge : graph.getEdges()) {
-            System.out.print("(" + edge.getFirst() + ", " + edge.getSecond() + ") ");
-        }
-        System.out.println();
+        graph.DFS(2);
+//        System.out.print("Vertices: ");
+//        for (int vertex : graph.getVertices()) {
+//            System.out.print(vertex + " ");
+//        }
+//        System.out.println();
+//
+//        System.out.print("Edges: ");
+//        for (Pair<Integer, Integer> edge : graph.getEdges()) {
+//            System.out.print("(" + edge.getFirst() + ", " + edge.getSecond() + ") ");
+//        }
+//        System.out.println();
+//
+//        System.out.print("Neighbors of vertex 1: ");
+//        for (int neighbor : graph.getNeighbors(1)) {
+//            System.out.print(neighbor + " ");
+//        }
+//        System.out.println();
+//
+//        System.out.println("Is vertex 1 adjacent to vertex 2? " + graph.isAdjacent(1, 2));
+//
+//        graph.removeEdge(1, 2);
+//        graph.removeVertex(3);
+//
+//        System.out.println("After removing some edges and vertices:");
+//
+//        System.out.print("Vertices: ");
+//        for (int vertex : graph.getVertices()) {
+//            System.out.print(vertex + " ");
+//        }
+//        System.out.println();
+//
+//        System.out.print("Edges: ");
+//        for (Pair<Integer, Integer> edge : graph.getEdges()) {
+//            System.out.print("(" + edge.getFirst() + ", " + edge.getSecond() + ") ");
+//        }
+//        System.out.println();
     }
 
 

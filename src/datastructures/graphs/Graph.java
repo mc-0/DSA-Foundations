@@ -1,12 +1,10 @@
 package datastructures.graphs;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Graph implements GraphADT{
 
+    private HashSet<Integer> visited = new HashSet<>();
     private HashMap<Integer, ArrayList<Integer>> adjacencyList;
 
     public Graph() {
@@ -87,4 +85,18 @@ public class Graph implements GraphADT{
     public ArrayList<Integer> getNeighbors(int vertex) {
         return new ArrayList<>(adjacencyList.getOrDefault(vertex, new ArrayList<>()));
     }
+
+    public void DFS(int source) {
+        System.out.println("Node: " + source);
+        visited.add(source);
+
+        System.out.println("Visited: " + Arrays.asList(visited.toArray()));
+        ArrayList<Integer> neighbors = getNeighbors(source);
+        for (int i : neighbors){
+            if (!visited.contains(i)) {
+                DFS(i);
+            }
+        }
+    }
+
 }
