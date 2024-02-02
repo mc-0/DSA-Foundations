@@ -99,4 +99,23 @@ public class Graph implements GraphADT{
         }
     }
 
+    public void BFS(int source) {
+        boolean[] visited = new boolean[getVertices().size()];
+        Queue<Integer> q = new LinkedList<>();
+
+        visited[source] = true;
+        q.add(source);
+
+        while (!q.isEmpty()) {
+            int currentNode = q.poll();
+            System.out.println(currentNode);
+            for (int neighbor : getNeighbors(currentNode)) {
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    q.add(neighbor);
+                }
+            }
+        }
+    }
+
 }
