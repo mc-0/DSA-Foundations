@@ -1,4 +1,4 @@
-package datastructures.graphs;
+package patterns.graphs;
 
 // Time: O(n^2)
 // Space: O(n)
