@@ -2,6 +2,8 @@ package patterns.matrixtraversal;
 
 public class CountIslandsDFS {
 
+    // Time: O(M * N) M: rows, N: columns
+    // Space: O(M * N)
     public static int countIslands(int[][] matrix) {
         int rows = matrix.length; // The # of sub-arrays in the matrix
         int cols = matrix[0].length; // The length of the sub-arrays in the matrix
