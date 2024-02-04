@@ -2,6 +2,8 @@ package patterns.util;
 
 import datastructures.linkedlists.ListNode;
 
+import java.util.Arrays;
+
 public class Helper {
 
     public static void swap(int[] arr, int i, int j) {
@@ -20,6 +22,12 @@ public class Helper {
             }
         }
         System.out.println(sb);
+    }
+
+    public static void printMatrix(int[][] matrix) {
+        for (int[] row : matrix) {
+            System.out.println(Arrays.toString(row));
+        }
     }
 
 
