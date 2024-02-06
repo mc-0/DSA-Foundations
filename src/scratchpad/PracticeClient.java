@@ -1,9 +1,6 @@
 package scratchpad;
 
-import patterns.matrixtraversal.BiggestIsland;
-import patterns.matrixtraversal.ClosedIslands;
-import patterns.matrixtraversal.CountIslandsDFS;
-import patterns.matrixtraversal.FloodFill;
+import patterns.matrixtraversal.*;
 import patterns.util.Helper;
 
 public class PracticeClient {
@@ -15,7 +12,7 @@ public class PracticeClient {
                 {0,0,1,0,0},
                 {0,0,0,0,0}};
 
-        System.out.println(ClosedIslands.countClosedIslands(n));
+        System.out.println(IslandPerimeter.calculateIslandSize(n));
 
     }
 
