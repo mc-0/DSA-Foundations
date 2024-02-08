@@ -1,19 +1,23 @@
 package scratchpad;
 
 import patterns.matrixtraversal.*;
+import patterns.twoheaps.MedianInNumberStream;
 import patterns.util.Helper;
+
+import java.util.Collections;
+import java.util.PriorityQueue;
 
 public class PracticeClient {
 
     public static void main(String[] args) {
-        int[][] n = {{0,1,0,1,1},
-                {0,0,0,0,0},
-                {0,0,1,1,0},
-                {0,0,1,0,0},
-                {0,0,0,0,0}};
+        MedianInNumberStream ms = new MedianInNumberStream();
+        ms.insertNum(1);
+        ms.insertNum(3);
+        ms.insertNum(7);
+        ms.insertNum(2);
+        ms.insertNum(9);
 
-        System.out.println(DistinctIslands.findDistinctIslands(n));
-
+        System.out.println(ms.findMedian());
     }
 
 
