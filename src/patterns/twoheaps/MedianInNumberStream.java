@@ -3,6 +3,7 @@ package patterns.twoheaps;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
+// Space: O(n) - Have to store all the numbers
 public class MedianInNumberStream {
 
     PriorityQueue<Integer> maxHeap;
@@ -13,6 +14,7 @@ public class MedianInNumberStream {
         minHeap = new PriorityQueue<>((a, b) -> a - b);
     }
 
+    // Time: O(logN)
     public void insertNum(int num) {
         if (maxHeap.isEmpty() || maxHeap.peek() >= num) {
             maxHeap.offer(num);
@@ -29,6 +31,7 @@ public class MedianInNumberStream {
             maxHeap.add(minHeap.poll());
   }
 
+  // Time: O(1)
   public  double findMedian() {
       if (maxHeap.size() == minHeap.size()) {
           // we have even number of elements, take the average of middle two elements
