@@ -1,5 +1,6 @@
 package patterns.modifiedbinarysearch;
-
+// Time: O(logN)
+//Space: O(1)
 public class NumberRange {
 
     public static int[] findRange(int[] arr, int key) {
