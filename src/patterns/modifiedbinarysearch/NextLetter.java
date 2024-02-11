@@ -1,5 +1,6 @@
 package patterns.modifiedbinarysearch;
-
+// Time: O(logN)
+// Space: O(1)
 public class NextLetter {
 
     public static char findNextLetter(char[] letters, char target) {
