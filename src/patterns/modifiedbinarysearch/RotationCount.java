@@ -1,21 +1,23 @@
 package patterns.modifiedbinarysearch;
 
+// Time: O(logN)
+// Space: O(1)
 public class RotationCount {
 
-    public static int countRotations(int[] arr) {
-        int start = 0, end = arr.length - 1;
+    public static int countRotations(int[] nums) {
+        int start = 0, end = nums.length - 1;
         while (start < end) {
             int mid = start + (end - start) / 2;
 
             // if mid is greater than the next element
-            if (mid < end && arr[mid] > arr[mid + 1])
+            if (mid < end && nums[mid] > nums[mid + 1])
                 return mid + 1;
 
             // if mid is smaller than the previous element
-            if (mid > start && arr[mid - 1] > arr[mid])
+            if (mid > start && nums[mid - 1] > nums[mid])
                 return mid;
 
-            if (arr[start] < arr[mid]) { // left side is sorted, so the pivot is on right side
+            if (nums[start] < nums[mid]) { // left side is sorted, so the pivot is on right side
                 start = mid + 1;
             } else { // right side is sorted, so the pivot is on the left side
                 end = mid - 1;
