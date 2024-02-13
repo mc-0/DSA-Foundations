@@ -8,9 +8,9 @@ import java.util.Arrays;
 public class PracticeClient {
 
     public static void main(String[] args) {
-//        int[] n = {1,4,2,1,3,2,3};
-//        System.out.println(SingleNumber.findSingleNumber(n));
-        System.out.println(1 ^ 4);
+        int[] n = {1, 4, 2, 1, 3, 5, 6, 2, 3, 5};
+        System.out.println(SingleNumber.findSingleNumber(n));
+
 
     }
 
