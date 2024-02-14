@@ -4,20 +4,15 @@ import patterns.bitwisexor.ComplimentBaseTen;
 import patterns.bitwisexor.SingleNumber;
 import patterns.bitwisexor.TwoSingleNumbers;
 import patterns.modifiedbinarysearch.*;
+import patterns.topkelements.TopKNumbers;
 
 import java.util.Arrays;
 
 public class PracticeClient {
 
     public static void main(String[] args) {
-        int num = 5;
-        int bitCount = 0;
-        int n = num;
-        while (n > 0) {
-            bitCount++;
-            n = n >> 1;
-        }
-        System.out.println(bitCount);
+        int[] n = {3, 1, 5, 12, 2, 11};
+        System.out.println(TopKNumbers.findKLargestNumbers(n, 3));
     }
 
 
