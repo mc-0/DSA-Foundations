@@ -1,5 +1,7 @@
 package patterns.bitwisexor;
 
+// Time: O(b) where ‘b’ is the number of bits required to store the given number.
+// Space: O(1)
 public class ComplimentBaseTen {
     public static int bitwiseComplement(int num) {
         // count number of total bits in 'num'
