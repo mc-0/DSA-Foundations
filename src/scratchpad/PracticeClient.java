@@ -1,9 +1,6 @@
 package scratchpad;
 
-import patterns.topkelements.ConnectRopes;
-import patterns.topkelements.FrequencySort;
-import patterns.topkelements.KClosestPointsToOrigin;
-import patterns.topkelements.Point;
+import patterns.topkelements.*;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -11,8 +8,10 @@ import java.util.Collections;
 public class PracticeClient {
 
     public static void main(String[] args) {
-        String s = "programming";
-        System.out.println(FrequencySort.sortCharacterByFrequency(s));
+        KthLargestNumberInStream k = new KthLargestNumberInStream(new int[]{3, 1, 5, 12, 2, 11}, 4);
+        System.out.println(k.add(6));
+        System.out.println(k.add(13));
+        System.out.println(k.add(4));
     }
 
 
