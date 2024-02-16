@@ -1,17 +1,14 @@
 package scratchpad;
 
-import patterns.topkelements.*;
-
-import java.util.Arrays;
-import java.util.Collections;
+import patterns.topkelements.kclosestnumbers.KClosestNumbers;
 
 public class PracticeClient {
 
     public static void main(String[] args) {
-        KthLargestNumberInStream k = new KthLargestNumberInStream(new int[]{3, 1, 5, 12, 2, 11}, 4);
-        System.out.println(k.add(6));
-        System.out.println(k.add(13));
-        System.out.println(k.add(4));
+//        [0,0,1,2,3,3,4,7,7,8] x: 3 k:5 -- Fails in LC
+        // Output: 347, should be
+        int[] n = {0,0,1,2,3,3,4,7,7,8};
+        System.out.println(KClosestNumbers.findClosestElements(n, 3, 5));
     }
 
 
