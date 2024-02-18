@@ -3,7 +3,7 @@ package patterns.kwaymerge;
 import java.util.Comparator;
 import java.util.List;
 import java.util.PriorityQueue;
-// Time: O(K∗logM)
+// Time: O(K∗logM) - going through at least K elements of all lists, & add + remove 1 elem. from heap each step
 // Space: O(M) - storing 1 element from each M input list
 public class KSmallestNumberInMSortedLists {
     class Node {
