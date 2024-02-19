@@ -6,7 +6,9 @@ import patterns.greedyalgorithms.RemoveDuplicateLetters;
 public class PracticeClient {
 
     public static void main(String[] args) {
-        System.out.println(RemoveDuplicateLetters.removeDuplicateLetters("mnopmn"));
+        String num = "123455";
+        int s = 1 + '0';
+        System.out.println(s);
     }
 
 
