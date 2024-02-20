@@ -5,8 +5,8 @@ we can conclude that we will not have more than NC subproblems
 (where ‘N’ is the number of items and ‘C’ is the knapsack capacity). This means that our time complexity will be O(NC).
 The above algorithm will use O(NC) space for the memoization array. Other than that, we will use O(N) space for the
 recursion call-stack. So the total space complexity will be O(NC + N), which is asymptotically equivalent to O(N*C).*/
-
-public class KnapsackMemoization {
+// TOP DOWN
+public class KnapsackTopDownDPMemoization {
 
     public int solveKnapsack(int[] profits, int[] weights, int capacity) {
         Integer[][] dp = new Integer[profits.length][capacity + 1];
