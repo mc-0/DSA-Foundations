@@ -2,13 +2,16 @@ package scratchpad;
 
 import patterns.greedyalgorithms.MinAddToMakeParenthesesValid;
 import patterns.greedyalgorithms.RemoveDuplicateLetters;
+import patterns.knapsackdp.KnapsackTopDownDPMemoization;
 
 public class PracticeClient {
 
     public static void main(String[] args) {
-        String num = "123455";
-        int s = 1 + '0';
-        System.out.println(s);
+        int[] w = {2,3,1,4};
+        int[] v = {4,5,3,7};
+        int c = 5;
+
+        System.out.println(KnapsackTopDownDPMemoization.solveKnapsack(v,w,c));
     }
 
 
