@@ -1,6 +1,7 @@
 package patterns.knapsackdp;
-
-public class EqualSubsetSumPartition {
+// Time: O(N*S)
+// Space: O(N*S)
+public class EqualSubsetSumPartitionTopDown {
 
     public static boolean canPartition(int[] num) {
         int sum = 0;
