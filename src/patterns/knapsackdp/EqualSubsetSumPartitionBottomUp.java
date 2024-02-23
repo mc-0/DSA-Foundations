@@ -1,5 +1,7 @@
 package patterns.knapsackdp;
 
+// Time: O(N*S)
+// Space: O(N*S)
 public class EqualSubsetSumPartitionBottomUp {
 
     public boolean canPartition(int[] num) {
