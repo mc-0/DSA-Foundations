@@ -2,7 +2,8 @@ package patterns.backtracking;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// Time: O(N^[N/M + 1])
+// Space: O(N/M)
 public class CombinationSum {
 
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
