@@ -66,4 +66,16 @@ public class Trie {
         return false;
     }
 
+    public boolean startsWith(String prefix) {
+        TrieNode node = root;
+        for (int i = 0; i < prefix.length(); i++) {
+            int index = prefix.charAt(i) - 'a';
+            if (node.children[index] == null) {
+                return false;
+            }
+            node = node.children[index];
+        }
+        return true;
+    }
+
 }
