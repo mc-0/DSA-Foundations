@@ -2,7 +2,8 @@ package patterns.backtracking;
 
 import java.util.HashSet;
 import java.util.Set;
-
+// Time: O(2^n)
+// Space: O(N)
 public class StringSplitUniqueSubstrings {
 
     public static int maxUniqueSplit(String s) {
