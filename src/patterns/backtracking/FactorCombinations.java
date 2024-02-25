@@ -3,8 +3,8 @@ package patterns.backtracking;
 import java.util.ArrayList;
 import java.util.List;
 
-// Time: O()
-// Space: O()
+// Time: O(N*sqrt(N))
+// Space: O(log(N))
 public class FactorCombinations {
 
     public static List<List<Integer>> getFactors(int n) {
