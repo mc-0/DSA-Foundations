@@ -2,7 +2,7 @@ package datastructures.tries;
 
 public class Trie {
 
-    private TrieNode root; // Root of the Trie
+    public TrieNode root; // Root of the Trie
 
     public Trie() {
         root = new TrieNode();
@@ -19,7 +19,7 @@ public class Trie {
                 node.children[index] = new TrieNode(); // Create a new node if it doesn't exist
             node = node.children[index];
         }
-        node.isEndOfWord = true; // Mark the end of the word
+        node.isEnd = true; // Mark the end of the word
     }
 
     // Function to search a word in the Trie
@@ -32,7 +32,7 @@ public class Trie {
                 return false; // Word not found
             node = node.children[index];
         }
-        return node.isEndOfWord; // Return true if word exists, false otherwise
+        return node.isEnd; // Return true if word exists, false otherwise
     }
 
     // Recursive function to delete a key from the Trie
@@ -41,8 +41,8 @@ public class Trie {
         // Base case: If the word's end is reached
         if (index == word.length()) {
             // If the word exists, unmark it and check if the node can be deleted
-            if (current.isEndOfWord) {
-                current.isEndOfWord = false;
+            if (current.isEnd) {
+                current.isEnd = false;
                 return current.children.length == 0; // Return true if no children exist
             }
             return false;
