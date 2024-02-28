@@ -1,7 +1,8 @@
 package patterns.topologicalsort;
 
 import java.util.*;
-
+// Time: O(V+E)
+// Space: O(V+E)
 public class TasksScheduling {
 
         public static boolean isSchedulingPossible(int tasks, int[][] prerequisites) {
