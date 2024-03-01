@@ -1,5 +1,6 @@
 package patterns.unionfind;
-
+// Time: O(NlogN)
+// Space: O(N)
 public class RedundantConnection {
     private int[] parent;
 
