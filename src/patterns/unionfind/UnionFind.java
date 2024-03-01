@@ -58,4 +58,8 @@ public class UnionFind {
             rank[xSet]++;
         }
     }
+
+    public void getRank(int i) {
+        System.out.println(this.rank[i]);
+    }
 }
