@@ -3,8 +3,8 @@ package patterns.orderedset;
 import java.lang.reflect.Array;
 import java.util.*;
 
-// Time: O()
-// Space: O()
+// Time: O(logN)
+// Space: O(N)
 public class MyCalendarI {
 
     private static TreeSet<int[]> bookings = new TreeSet<>((a, b) -> a[0] - b[0]);
