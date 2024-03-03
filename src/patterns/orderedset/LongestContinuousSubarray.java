@@ -2,8 +2,8 @@ package patterns.orderedset;
 
 import java.util.TreeMap;
 
-// Time: O()
-// Space: O()
+// Time: O(NlogN)
+// Space: O(N)
 public class LongestContinuousSubarray {
 //10, 1, 2, 4, 7
     public static int longestSubarray(int[] nums, int limit) {
