@@ -1,6 +1,7 @@
 package scratchpad;
 
 import org.junit.jupiter.api.Order;
+import patterns.orderedset.MyCalendarI;
 import patterns.orderedset.OneThreeTwoPattern;
 import patterns.orderedset.OrderedSet;
 
@@ -12,7 +13,8 @@ public class PracticeClient {
 
     public static void main(String[] args) {
 
-        System.out.println(Integer.MIN_VALUE);
+        int[][] n = {{10, 20}, {15, 25}, {20, 30}};
+        System.out.println(MyCalendarI.book(n));
 
 
     }

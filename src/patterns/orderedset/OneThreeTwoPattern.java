@@ -3,8 +3,8 @@ package patterns.orderedset;
 import java.util.PriorityQueue;
 import java.util.TreeSet;
 
-// Time: O()
-// Space: O()
+// Time: O(NLogN)
+// Space: O(N)
 public class OneThreeTwoPattern {
 
     public static boolean find132pattern(int[] nums) {
