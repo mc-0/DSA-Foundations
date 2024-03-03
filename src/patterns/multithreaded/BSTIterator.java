@@ -18,7 +18,9 @@ public class BSTIterator {
     }
 
     /** @return the next smallest number */
-    public int next() {
+    // Synchronized for thread-safety
+    // O(1) - amortized cost, O(N) in the worst case
+    synchronized public int next() {
         TreeNode tmpNode = stack.pop();
         traverseLeft(tmpNode.right);
         return tmpNode.val;
