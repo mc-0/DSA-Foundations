@@ -3,7 +3,8 @@ package blind75.arrays_and_hashing;
 import java.util.ArrayList;
 import java.util.List;
 // 271. Encode & Decode Strings
-public class encodeAndDecode {
+// Premium Locked Question
+public class EncodeAndDecode {
 
     public static String encode(List<String> strs) {
 
