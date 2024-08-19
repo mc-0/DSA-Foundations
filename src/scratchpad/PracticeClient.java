@@ -6,8 +6,8 @@ import blind75.slidingwindow.BuyAndSellStock;
 public class PracticeClient {
 
     public static void main(String[] args) {
-        int[] prices = new int[]{7, 1, 5, 3, 6, 4};
-        BuyAndSellStock buyAndSellStock = new BuyAndSellStock();
-        System.out.println(buyAndSellStock.maxProfit(prices));
+        int[] prices = new int[25];
+
+        System.out.println('z' - 'a');
     }
 }
