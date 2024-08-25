@@ -1,4 +1,4 @@
-package blind75.arrays_and_hashing;
+package patterns.arrays_and_hashing;
 // 238. Product of Array Except Self
 public class ProductOfArrayExceptSelf {
     public int[] productExceptSelf(int[] nums) {

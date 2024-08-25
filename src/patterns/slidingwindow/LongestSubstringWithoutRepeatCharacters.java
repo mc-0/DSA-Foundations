@@ -1,8 +1,6 @@
-package blind75.slidingwindow;
+package patterns.slidingwindow;
 
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
 
 // 3. Longest Substring Without Repeating Characters

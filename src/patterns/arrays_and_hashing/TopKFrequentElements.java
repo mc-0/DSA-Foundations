@@ -1,8 +1,6 @@
-package blind75.arrays_and_hashing;
+package patterns.arrays_and_hashing;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.PriorityQueue;
 
 // 347. Top K Frequent Elements

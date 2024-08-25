@@ -1,4 +1,4 @@
-package blind75.twopointers;
+package patterns.twopointers;
 
 import java.util.ArrayList;
 import java.util.Arrays;

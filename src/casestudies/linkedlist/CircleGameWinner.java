@@ -1,4 +1,4 @@
-package blind75.misc_leetcode;
+package casestudies.linkedlist;
 
 import datastructures.linkedlists.ListNode;
 // 1823. Find the Winner of the Circular Game

@@ -1,8 +1,5 @@
 package scratchpad;
 
-import blind75.arrays_and_hashing.ValidSudoku;
-import blind75.slidingwindow.BuyAndSellStock;
-
 public class PracticeClient {
 
     public static void main(String[] args) {

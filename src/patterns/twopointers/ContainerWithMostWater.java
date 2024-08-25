@@ -1,4 +1,4 @@
-package blind75.twopointers;
+package patterns.twopointers;
 
 // 11. Container With Most Water
 public class ContainerWithMostWater {

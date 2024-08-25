@@ -1,4 +1,4 @@
-package blind75.slidingwindow;
+package patterns.twopointers;
 
 // 121. Best Time To Buy & Sell Stock
 public class BuyAndSellStock {

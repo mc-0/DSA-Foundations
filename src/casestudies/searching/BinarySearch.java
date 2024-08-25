@@ -1,4 +1,4 @@
-package searching;
+package casestudies.searching;
 
 public class BinarySearch {
 

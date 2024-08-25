@@ -1,4 +1,4 @@
-package blind75.twopointers;
+package patterns.twopointers;
 
 public class ValidPalindrome {
 

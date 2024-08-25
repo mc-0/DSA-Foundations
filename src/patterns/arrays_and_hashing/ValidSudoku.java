@@ -1,4 +1,4 @@
-package blind75.arrays_and_hashing;
+package patterns.arrays_and_hashing;
 
 import java.util.*;
 
