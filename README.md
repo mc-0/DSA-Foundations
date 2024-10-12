@@ -1,46 +1,16 @@
-# Algorithmic Problem-Solving Approach
-### Understand
-__________________________________________
-1. Read & Understand the Problem
-   - Note Constraints / Limitations
-   
-2. Verify Inputs / Outputs
-   - Consider Time & Space Complexity
-   
-3. Clarify Ambiguity / Edge Cases
-   - Ask Questions
-   
-### Plan
-__________________________________________
-1. Break the Problem Down Into Smaller Parts
-    - Consider various approaches
-    - Think about potential data structures & algorithms that might fit the problem
+# Data Structures & Algorithms Foundations
 
-2. Create a Rough Draft / Pseudocode For The Approach
-    - Identify how you will handle various edge cases
-
-### Solve
-__________________________________________
-1. Implement the Solution Using the Plan / Rough Draft
-
-2. Test the solution with various inputs (normal, boundaries, edge cases, etc.)
-
-3. Analyze Performance - Time & Space Complexity
-
-### Review
-__________________________________________
-1. Review & Explain Your Solution
-    - Discuss improvements & alternative solutions
-
-2. Optimize & refactor if necessary (i.e., due to follow-up question(s))
-
-
-### Asymptotic Analysis
-
-![bigO.png](misc%2FbigO.png)
-
-|          | Constant  | Logarithmic   | Linear | Linearithmic | Quadratic        | Cubic            | Exponential       |
-|----------|-----------|---------------|--------|--------------|------------------|------------------|-------------------|
-| Big-O:   | O(1)      | O(log(n))     | O(n)   | O(nlog(n))   | O(n<sup>2</sup>) | O(n<sup>3</sup>) | O(2<sup>n</sup>)  |
-| Example: | Statement | Binary Search | Loop   | Merge Sort   | 2 Nested Loop    | 3 Nested Loops   | Exhaustive Search |
-
+0. [Home](https://github.com/mc-0/DSA/wiki)
+1. [Asymptotic Analysis](https://github.com/mc-0/DSA/wiki/Asymptotic-Analysis)
+2. [An Approach to Problem-Solving](https://github.com/mc-0/DSA/wiki/An-Approach-to-Problem-Solving)
+3. [Arrays](https://github.com/mc-0/DSA/wiki/Arrays) - **__Coming Soon__**
+4. [Linked Lists]() - **__Coming Soon__**
+5. [Stacks]() - **__Coming Soon__**
+6. [Queues]() - **__Coming Soon__**
+7. [Hash Tables]() - **__Coming Soon__**
+8. [Trees]() - **__Coming Soon__**
+9. [Graphs]() - **__Coming Soon__**
+10. [Heaps]() - **__Coming Soon__**
+11. [Tries]() - **__Coming Soon__**
+12. [Sorting]() - **__Coming Soon__**
+13. [Searching]() - **__Coming Soon__**
