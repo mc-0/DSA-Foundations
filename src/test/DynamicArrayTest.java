@@ -1,5 +1,6 @@
-package datastructures.arrays;
+package test;
 
+import datastructures.arrays.DynamicArray;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

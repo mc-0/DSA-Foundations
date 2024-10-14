@@ -1,10 +1,12 @@
 package datastructures.stacks;
 
-public class LinkedListBasedStack<T> {
+import java.util.EmptyStackException;
 
-    private class Node<T>{
+public class LinkedListBasedStack<T> implements Stack<T> {
+
+    private class Node {
         T value;
-        Node next = null;
+        Node next;
 
         Node(T value){
             this.value = value;
@@ -14,41 +16,40 @@ public class LinkedListBasedStack<T> {
     private Node top;
     private int size = 0;
 
-    public void push(T value){
+    @Override
+    public void push(T value) {
         Node node = new Node(value);
-        if(size == 0){
-            top = node;
-        }
-        else{
-            node.next = top;
-            top = node;
-        }
+        node.next = top; // Point new node to the current top
+        top = node; // Update top to the new node
         size++;
     }
 
-    public Object pop(){
-        if(size == 0){
-            throw new IllegalArgumentException("Stack is empty!");
+    @Override
+    public T pop() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
         }
-        Object value = top.value;
-        top = top.next;
+        T value = top.value; // Get the value from the top node
+        top = top.next; // Update top to the next node
         size--;
-
         return value;
     }
 
-    public Object peek(){
-        if(top == null){
-            throw new IndexOutOfBoundsException("The stack is empty! Nothing to see!");
+    @Override
+    public T peek() {
+        if (isEmpty()) {
+            throw new EmptyStackException();
         }
-        return top.value;
+        return top.value; // Return the value of the top node
     }
 
-    public boolean isEmpty(){
-        return size == 0;
+    @Override
+    public boolean isEmpty() {
+        return size == 0; // Check if the size is zero
     }
 
-    public int size(){
-        return size;
+    @Override
+    public int size() {
+        return size; // Return the size of the stack
     }
 }
