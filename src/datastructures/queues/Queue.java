@@ -1,74 +1,22 @@
 package datastructures.queues;
-// Linked List Implementation
-public class Queue<T> {
 
-    private int size = 0;
-    private Node start;
-    private Node end;
+public interface Queue<T> {
+    // Adds an element to the end of the queue
+    void enqueue(T element);
 
-    public void enqueue(T value){
-        Node newNode = new Node(value);
+    // Removes and returns the front element of the queue
+    T dequeue();
 
-        if(size == 0){
-            start = newNode;
-            end = newNode;
-        }
-        else{
-            start.next = newNode;
-            start = newNode;
-        }
-        size++;
-    }
+    // Returns (but does not remove) the front element of the queue
+    T peek();
 
-    public Object dequeue(){
-        if (size == 0){
-            throw new RuntimeException("No objects exist in the queue!");
-        }
-        Object returnVal = end.value;
-        end = end.next;
-        size--;
-        return returnVal;
-    }
+    // Returns the number of elements in the queue
+    int size();
 
-    public void peek(){
-        if(size == 0){
-            System.out.println("Stack is empty!");
-        }
-        else{
-            System.out.println(end.value);
-        }
-    }
+    // Returns true if the queue is empty, false otherwise
+    boolean isEmpty();
 
-    public boolean isEmpty(){
-        return size == 0;
-    }
-
-    public int size(){
-        return size;
-    }
-
-    public void printQueue(){
-        Node currentNode = end;
-        StringBuilder sb = new StringBuilder();
-        sb.append("(END) ");
-        while (currentNode.next != null){
-            sb.append("[" + currentNode.value + "] <-- ");
-            currentNode = currentNode.next;
-        }
-        sb.append("[" + currentNode.value + "] (START)");
-
-        System.out.println(sb);
-    }
-
-
-
-    private class Node<T>{
-        private T value;
-        private Node next;
-
-        public Node(T value){
-            this.value = value;
-            this.next = null;
-        }
-    }
+    // Clears all elements in the queue
+    void clear();
 }
+
