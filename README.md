@@ -6,7 +6,7 @@
 4. [Arrays](https://github.com/mc-0/DSA/wiki/Arrays)
 5. [Linked Lists](https://github.com/mc-0/DSA/wiki/Linked-Lists)
 6. [Stacks](https://github.com/mc-0/DSA/wiki/Stacks)
-7. [Queues]() - **__Coming Soon__**
+7. [Queues](https://github.com/mc-0/DSA/wiki/Queues)
 8. [Hash Tables]() - **__Coming Soon__**
 9. [Trees]() - **__Coming Soon__**
 10. [Graphs]() - **__Coming Soon__**
