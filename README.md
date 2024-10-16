@@ -9,8 +9,8 @@
 7. [Queues](https://github.com/mc-0/DSA/wiki/Queues)
 8. [Hash Tables](https://github.com/mc-0/DSA/wiki/Hash-Tables)
 9. [Trees](https://github.com/mc-0/DSA/wiki/Trees)
-10. [Graphs]() - **__Coming Soon__**
-11. [Heaps]() - **__Coming Soon__**
-12. [Tries]() - **__Coming Soon__**
+10. [Graphs](https://github.com/mc-0/DSA/wiki/Graphs)
+11. [Heaps](https://github.com/mc-0/DSA/wiki/Heaps)
+12. [Tries](https://github.com/mc-0/DSA/wiki/Tries)
 13. [Sorting]() - **__Coming Soon__**
 14. [Searching]() - **__Coming Soon__**
