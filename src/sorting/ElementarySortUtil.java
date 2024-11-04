@@ -18,9 +18,11 @@ public class ElementarySortUtil {
         }
     }
 
-    // Treats the first item in an array as sorted & continues to sort successive values to where they belong.
-    // Runtime: O(n^2) Quadratic || Space: O(1) || Stable Sort
-    // In the best case can be O(n) linear time complexity if dealing with a small number of inputs that are nearly sorted.
+    /***
+     * Treats the first item in an array as sorted & continues to sort successive values to where they belong.
+     * Runtime: O(n^2) Quadratic || Space: O(1) || Stable Sort
+     * In the best case can be O(n) linear time complexity if dealing with a small number of inputs that are nearly sorted.
+     ***/
     public static void insertionSort(int[] a) {
         for (int i = 1; i < a.length; i++){
 
@@ -34,9 +36,12 @@ public class ElementarySortUtil {
         }
     }
 
-    // Marks the current value as the minimum, which is updated if a lesser value is found.
-    // At the end, swaps the initial minimum with the new compared minimum.
-    // Runtime: O(n^2) Quadratic || Space: O(1) || Unstable Sort
+    /***
+     * Marks the current value as the minimum, which is updated if a lesser value is found.
+     * At the end, swaps the initial minimum with the new compared minimum.
+     * Runtime: O(n^2) Quadratic || Space: O(1) || Unstable Sort
+     * O(n^2) compares even if partially / totally sorted
+     ***/
     public static void selectionSort(int[] a) {
         for (int i = 0; i < a.length - 1; i++) {
             int smallest = i;
