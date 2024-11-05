@@ -4,7 +4,7 @@ import util.Swapper;
 
 // Collection of the most basic elementary sorting techniques.
 // Primarily used in the process of learning sorting strategies
-public class ElementarySortUtil {
+public class ElementarySorts {
 
     // Runtime: O(n^2) Quadratic || Space: O(1) || Stable || In-Place
     public static void bubbleSort(int[] collection) {
