@@ -3,6 +3,7 @@ package util;
 import datastructures.linkedlists.ListNode;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Helper {
 
@@ -16,6 +17,14 @@ public class Helper {
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+    }
+
+    public static <T> void shuffle(T[] input) {
+        Random random = new Random();
+        for (int i = input.length - 1; i > 0; i--) {
+            int j = random.nextInt(i + 1);
+            Helper.swap(input, i, j);
+        }
     }
 
     public static void printList(ListNode head) {
