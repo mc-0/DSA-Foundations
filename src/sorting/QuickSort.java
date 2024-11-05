@@ -10,6 +10,8 @@ import util.Helper;
  * Space Complexity: O(log n) due to recursion stack; in-place with constant extra space
  * Stability: Not stable. Equal elements may not retain their original order.
  * In-Place: Yes
+ * Considerations: There is a lot of overhead in using QuickSort on small input arrays
+ * > Implementing a cutoff of 10 - 20 elements, where insertion sort is used instead is one way to handle such a scenario
  * ----------------------------------------------------------------------
  * @param <T> the type of elements in the array, which must be comparable
  */
