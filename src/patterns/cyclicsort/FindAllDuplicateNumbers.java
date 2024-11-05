@@ -3,7 +3,7 @@ package patterns.cyclicsort;
 import java.util.ArrayList;
 import java.util.List;
 
-import static patterns.util.Helper.swap;
+import static util.Helper.swap;
 
 public class FindAllDuplicateNumbers {
 

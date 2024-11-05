@@ -1,6 +1,6 @@
 package patterns.cyclicsort;
 
-import patterns.util.Helper;
+import util.Helper;
 
 import java.util.ArrayList;
 import java.util.List;

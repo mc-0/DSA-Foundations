@@ -18,9 +18,10 @@ public class Heap {
     private HeapNode root;
     private int depth;
 
-    public HeapNode minHeapify(int[] a) {
-        int[] sorted = a;
-        QuickSort.sort(sorted, 0, a.length-1);
+    public HeapNode minHeapify(Integer[] a) {
+        Integer[] sorted = a;
+        QuickSort<Integer> qs = new QuickSort();
+        qs.sort(sorted, 0, a.length-1);
 
         HeapNode node = new HeapNode(sorted[0]);
         root = node;

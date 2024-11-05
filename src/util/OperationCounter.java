@@ -1,4 +1,4 @@
-package sorting.util;
+package util;
 
 public class OperationCounter {
 

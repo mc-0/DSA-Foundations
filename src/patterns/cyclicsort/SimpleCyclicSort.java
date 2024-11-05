@@ -1,6 +1,6 @@
 package patterns.cyclicsort;
 
-import patterns.util.Helper;
+import util.Helper;
 
 public class SimpleCyclicSort {
 

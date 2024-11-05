@@ -1,6 +1,6 @@
 package sorting;
 
-import sorting.util.Swapper;
+import util.Swapper;
 
 // Collection of the most basic elementary sorting techniques.
 // Primarily used in the process of learning sorting strategies

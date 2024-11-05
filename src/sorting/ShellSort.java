@@ -1,7 +1,6 @@
 package sorting;
 
-import sorting.util.OperationCounter;
-import sorting.util.Swapper;
+import util.Swapper;
 
 // Builds on insertion sort, but starts by sorting fixed width gaps in the array (hth value)
 // Gaps decrease on iteration, when reaching 1, typical insertion sort applies

@@ -1,7 +1,7 @@
 package sorting;
 
 
-import sorting.util.CollectionUtil;
+import util.CollectionUtil;
 
 import java.io.FileNotFoundException;
 import java.util.Arrays;
@@ -10,9 +10,10 @@ public class SortingClient {
 
     public static void main(String[] args) throws FileNotFoundException {
         int[] array = CollectionUtil.populateArray("src\\inputdata\\randomInts.txt");
-        int[] generic = {8,1,3,6,9,5,2};
-        ShellSort.sort(array);
-        CollectionUtil.printFormattedArray(array);
+        Integer[] generic = {8,1,3,6,9,5,2,4,7};
+        QuickSort<Integer> qs = new QuickSort();
+        qs.sort(generic, 0, generic.length-1);
+        System.out.println(Arrays.asList(generic));
     }
 
 

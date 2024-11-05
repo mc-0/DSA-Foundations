@@ -1,6 +1,6 @@
 package patterns.cyclicsort;
 
-import static patterns.util.Helper.swap;
+import static util.Helper.swap;
 
 public class FindCorruptPair {
 
