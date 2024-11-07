@@ -26,6 +26,6 @@ replay_pid*
 Main
 src/Main.java
 .idea/vcs.xml
-.idea
+.idea/
 DSA.iml
-out/*
+out/
