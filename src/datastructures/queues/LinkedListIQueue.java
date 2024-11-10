@@ -1,6 +1,6 @@
 package datastructures.queues;
 
-public class LinkedListQueue<T> implements Queue<T> {
+public class LinkedListIQueue<T> implements IQueue<T> {
 
     private class Node {
         private final T value;

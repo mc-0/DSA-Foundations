@@ -1,6 +1,6 @@
 package datastructures.queues;
 
-public class ArrayQueue<T> implements Queue<T> {
+public class ArrayIQueue<T> implements IQueue<T> {
     private static final int DEFAULT_CAPACITY = 10;
     private T[] data;   // Array to store queue elements
     private int front;  // Points to the front of the queue
@@ -9,7 +9,7 @@ public class ArrayQueue<T> implements Queue<T> {
     private int capacity;
 
     @SuppressWarnings("unchecked")
-    public ArrayQueue(int capacity) {
+    public ArrayIQueue(int capacity) {
         this.capacity = capacity;
         data = (T[]) new Object[capacity];
         front = 0;
@@ -17,7 +17,7 @@ public class ArrayQueue<T> implements Queue<T> {
         size = 0;
     }
 
-    public ArrayQueue() {
+    public ArrayIQueue() {
         this(DEFAULT_CAPACITY);
     }
 
