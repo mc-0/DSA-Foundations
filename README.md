@@ -13,4 +13,4 @@
 11. [Heaps](https://github.com/mc-0/DSA/wiki/Heaps)
 12. [Tries](https://github.com/mc-0/DSA/wiki/Tries)
 13. [Sorting](https://github.com/mc-0/DSA/wiki/Sorting)
-14. [Searching]() - **__Coming Soon__**
+14. [Searching](https://github.com/mc-0/DSA/wiki/Searching)
