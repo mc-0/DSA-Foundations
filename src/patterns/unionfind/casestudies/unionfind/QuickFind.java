@@ -1,6 +1,6 @@
-package casestudies.unionfind;
+package patterns.unionfind.casestudies.unionfind;
 
-public class QuickFind implements UF{
+public class QuickFind implements UF {
 
     private int[] id;
     private int count;

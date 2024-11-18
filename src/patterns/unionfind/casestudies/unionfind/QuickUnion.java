@@ -1,27 +1,18 @@
-package casestudies.unionfind;
+package patterns.unionfind.casestudies.unionfind;
 
-import java.awt.*;
-
-public class WeightedQuickUnion implements UF{;
+public class QuickUnion implements UF {
 
     private int[] id;
-    private int[] sz;
     private int count;
 
-    public WeightedQuickUnion(int n) {
+    public QuickUnion(int n) {
         this.count = n;
         this.id = new int[n];
-        this.sz = new int[n];
 
         for (int i = 0; i < n; i++) {
             id[i] = i;
         }
-
-        for (int i = 0; i < n; i++) {
-            sz[i] = 1;
-        }
     }
-
 
     @Override
     public int getCount() {
@@ -35,6 +26,7 @@ public class WeightedQuickUnion implements UF{;
 
     @Override
     public int find(int p) {
+        // Travels the array to find the root
         while (p != id[p]) {
             p = id[p];
         }
@@ -48,14 +40,8 @@ public class WeightedQuickUnion implements UF{;
 
         if (i == j) return;
 
-        if (sz[i] < sz[j]) {
-            id[i] = j;
-            sz[j] += sz[i];
-        }
-        else {
-            id[j] = i;
-            sz[i] += sz[j];
-        }
+        id[i] = j;
+
         count--;
     }
 }

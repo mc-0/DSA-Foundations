@@ -2,14 +2,14 @@ package datastructures.stacks;
 
 import java.util.EmptyStackException;
 
-public class ArrayBasedStack<T> implements Stack<T> {
+public class ArrayBasedIStack<T> implements IStack<T> {
 
     private T[] items;
     private int top;
     private int capacity;
 
     @SuppressWarnings("unchecked")
-    public ArrayBasedStack() {
+    public ArrayBasedIStack() {
         this.capacity = 2;
         this.items = (T[]) new Object[capacity];
         this.top = -1; // Use -1 to indicate an empty stack

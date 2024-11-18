@@ -1,8 +1,10 @@
 package datastructures.stacks;
 
 import java.util.EmptyStackException;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-public class LinkedListBasedStack<T> implements Stack<T> {
+public class LinkedListBasedIStack<T> implements IStack<T>, Iterable<T> {
 
     private class Node {
         T value;
@@ -51,5 +53,31 @@ public class LinkedListBasedStack<T> implements Stack<T> {
     @Override
     public int size() {
         return size; // Return the size of the stack
+    }
+
+    public Iterator<T> iterator() {
+        return new LinkedIterator(top);
+    }
+
+    // the iterator
+    private class LinkedIterator implements Iterator<T> {
+        private Node current;
+
+        public LinkedIterator(Node first) {
+            current = first;
+        }
+
+        // is there a next item?
+        public boolean hasNext() {
+            return current != null;
+        }
+
+        // returns the next item
+        public T next() {
+            if (!hasNext()) throw new NoSuchElementException();
+            T item = current.value;
+            current = current.next;
+            return item;
+        }
     }
 }

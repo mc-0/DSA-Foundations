@@ -1,13 +1,13 @@
 package test;
 
-import datastructures.stacks.ArrayBasedStack;
+import datastructures.stacks.ArrayBasedIStack;
 import org.junit.Test;
 
-public class StackTest {
+public class IStackTest {
 
     @Test
     public void testPeek() {
-        ArrayBasedStack<Integer> abs = new ArrayBasedStack<>();
+        ArrayBasedIStack<Integer> abs = new ArrayBasedIStack<>();
         abs.push(5);
         assert(abs.peek() == 5);
     }

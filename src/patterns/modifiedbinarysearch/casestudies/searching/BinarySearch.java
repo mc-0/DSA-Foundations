@@ -1,4 +1,4 @@
-package casestudies.searching;
+package patterns.modifiedbinarysearch.casestudies.searching;
 
 public class BinarySearch {
 

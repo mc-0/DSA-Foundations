@@ -1,4 +1,4 @@
-package casestudies.linkedlist;
+package patterns.reverselinkedlist.casestudies.linkedlist;
 
 import datastructures.linkedlists.ListNode;
 // 1823. Find the Winner of the Circular Game

@@ -1,4 +1,4 @@
-package casestudies.unionfind;
+package patterns.unionfind.casestudies.unionfind;
 
 public interface UF {
 //    Fields to exist within an implementation

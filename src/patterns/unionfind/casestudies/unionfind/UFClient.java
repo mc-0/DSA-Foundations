@@ -1,4 +1,4 @@
-package casestudies.unionfind;
+package patterns.unionfind.casestudies.unionfind;
 
 import java.io.File;
 import java.io.IOException;
