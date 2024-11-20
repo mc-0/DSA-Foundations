@@ -3,6 +3,14 @@ package searching;
 import edu.princeton.cs.algs4.Stack;
 import edu.princeton.cs.algs4.Graph;
 
+/*
+    Generalized Approach to Depth First Search
+    1. Start at the root node (or any arbitrary node)
+    2. Mark the node as `visited`
+    3. Perform any necessary operations
+    4. 
+ */
+
 public class DepthFirstPaths {
     private boolean[] marked;    // marked[v] = is there an s-v path?
     private int[] edgeTo;        // edgeTo[v] = last edge on s-v path

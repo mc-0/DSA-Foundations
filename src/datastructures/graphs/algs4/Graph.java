@@ -3,6 +3,7 @@ package datastructures.graphs.algs4;
 import datastructures.linkedlists.Bag;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.Stack;
+import edu.princeton.cs.algs4.StdOut;
 
 import java.util.NoSuchElementException;
 
@@ -18,7 +19,7 @@ public class Graph {
      * Initializes an empty graph with {@code V} vertices and 0 edges.
      * param V the number of vertices
      *
-     * @param V number of vertices
+     * @param  V number of vertices
      * @throws IllegalArgumentException if {@code V < 0}
      */
     public Graph(int V) {
@@ -37,7 +38,7 @@ public class Graph {
      * followed by the number of edges <em>E</em>,
      * followed by <em>E</em> pairs of vertices, with each entry separated by whitespace.
      *
-     * @param in the input stream
+     * @param  in the input stream
      * @throws IllegalArgumentException if {@code in} is {@code null}
      * @throws IllegalArgumentException if the endpoints of any edge are not in prescribed range
      * @throws IllegalArgumentException if the number of vertices or edges is negative
@@ -61,7 +62,8 @@ public class Graph {
                 validateVertex(w);
                 addEdge(v, w);
             }
-        } catch (NoSuchElementException e) {
+        }
+        catch (NoSuchElementException e) {
             throw new IllegalArgumentException("invalid input format in Graph constructor", e);
         }
     }
@@ -70,7 +72,7 @@ public class Graph {
     /**
      * Initializes a new graph that is a deep copy of {@code G}.
      *
-     * @param G the graph to copy
+     * @param  G the graph to copy
      * @throws IllegalArgumentException if {@code G} is {@code null}
      */
     public Graph(Graph G) {
@@ -117,14 +119,14 @@ public class Graph {
     // throw an IllegalArgumentException unless {@code 0 <= v < V}
     private void validateVertex(int v) {
         if (v < 0 || v >= V)
-            throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V - 1));
+            throw new IllegalArgumentException("vertex " + v + " is not between 0 and " + (V-1));
     }
 
     /**
      * Adds the undirected edge v-w to this graph.
      *
-     * @param v one vertex in the edge
-     * @param w the other vertex in the edge
+     * @param  v one vertex in the edge
+     * @param  w the other vertex in the edge
      * @throws IllegalArgumentException unless both {@code 0 <= v < V} and {@code 0 <= w < V}
      */
     public void addEdge(int v, int w) {
@@ -139,7 +141,7 @@ public class Graph {
     /**
      * Returns the vertices adjacent to vertex {@code v}.
      *
-     * @param v the vertex
+     * @param  v the vertex
      * @return the vertices adjacent to vertex {@code v}, as an iterable
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
@@ -151,7 +153,7 @@ public class Graph {
     /**
      * Returns the degree of vertex {@code v}.
      *
-     * @param v the vertex
+     * @param  v the vertex
      * @return the degree of vertex {@code v}
      * @throws IllegalArgumentException unless {@code 0 <= v < V}
      */
@@ -165,7 +167,7 @@ public class Graph {
      * Returns a string representation of this graph.
      *
      * @return the number of vertices <em>V</em>, followed by the number of edges <em>E</em>,
-     * followed by the <em>V</em> adjacency lists
+     *         followed by the <em>V</em> adjacency lists
      */
     public String toString() {
         StringBuilder s = new StringBuilder();
@@ -179,4 +181,18 @@ public class Graph {
         }
         return s.toString();
     }
+
+
+    /**
+     * Unit tests the {@code Graph} data type.
+     *
+     * @param args the command-line arguments
+     */
+    public static void main(String[] args) {
+        In in = new In(args[0]);
+        Graph G = new Graph(in);
+        StdOut.println(G);
+    }
+
 }
+
