@@ -1,4 +1,4 @@
-package patterns.knapsackdp;
+package patterns.dynamicprogramming.knapsackdp;
 
 /*Since our memoization array dp[profits.length][capacity+1] stores the results for all subproblems,
 we can conclude that we will not have more than NC subproblems

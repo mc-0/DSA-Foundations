@@ -1,4 +1,4 @@
-package patterns.knapsackdp;
+package patterns.dynamicprogramming.knapsackdp;
 
 // Time: O(2^n)
 // Space: O(n)

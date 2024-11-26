@@ -1,4 +1,4 @@
-package patterns.knapsackdp;
+package patterns.dynamicprogramming.knapsackdp;
 
 // Time and space complexity of O(N*C), where ‘N’ represents total items, and ‘C’ is the maximum capacity.
 public class KnapsackBottomUpDP {

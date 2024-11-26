@@ -1,4 +1,4 @@
-package patterns.knapsackdp;
+package patterns.dynamicprogramming.knapsackdp;
 // Time: O(N*S)
 // Space: O(N*S)
 public class EqualSubsetSumPartitionTopDown {

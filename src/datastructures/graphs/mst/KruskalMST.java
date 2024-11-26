@@ -1,4 +1,4 @@
-package datastructures.graphs.algs4;
+package datastructures.graphs.mst;
 
 import edu.princeton.cs.algs4.*;
 
