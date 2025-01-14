@@ -1,5 +1,5 @@
 package patterns.arrays_and_hashing;
-// 27. Remove Duplicates From Sorted Array
+// 26. Remove Duplicates From Sorted Array
 public class RemoveDuplicatesFromSortedArray {
     /*
     * Starts 2 pointers from the 1st index. `insert` tracks index which can be updated as its a dupe
