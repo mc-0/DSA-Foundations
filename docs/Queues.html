@@ -1,0 +1,43 @@
+<p><img src="https://github.com/user-attachments/assets/555c707f-bf39-47f1-b07e-7495ad18fe4e" alt="Queue-Data-Structures" /></p>
+<h1>Attributes</h1>
+<ul>
+<li>FIFO Data Structure (First In, First Out)</li>
+<li>Double-Ended Queues (<em>Deques</em>) have the same operations to queue / dequeue from either end</li>
+<li>[[Heaps|Priority Queues]] remove elements based on priory &amp; not order</li>
+</ul>
+<h1>Operations</h1>
+<p>|               |               |
+|---------------|---------------|
+| Enqueue |    O(1)     |
+| Dequeue |    O(1)     |
+| Peek |    O(1)     |
+| Size |    O(1)     |
+| IsEmpty |    O(1)     |</p>
+<h1>Trade Offs</h1>
+<h4>Array Implementation</h4>
+<p>| <strong>Pros</strong>                              | <strong>Cons</strong>                               |
+|---------------------------------------|----------------------------------------|
+| Simple implementation with fixed size | Fixed-size arrays may waste space if not full |
+| Amortized O(1) enqueue and dequeue    | Resizing requires O(n) time complexity |
+| Cache-friendly, good memory locality  | Needs resizing logic to handle overflow |
+| Easy random access by index           | Memory reallocation during resize can be costly |
+| Efficient for small, known sizes      | Wastes memory if array is resized too frequently |</p>
+<h4>Linked List Implementation</h4>
+<p>| <strong>Pros</strong>                              | <strong>Cons</strong>                               |
+|---------------------------------------|----------------------------------------|
+| Dynamic size (grows and shrinks)      | Higher memory overhead due to pointers |
+| No need for resizing or fixed capacity| More complex implementation            |
+| O(1) enqueue and dequeue operations   | Poor cache locality compared to arrays |
+| Memory-efficient for variable data    | Extra memory for storing node pointers |
+| Suitable for unpredictable sizes      | Slower for smaller data compared to arrays |</p>
+<h1>Common Uses</h1>
+<ul>
+<li>OS Task Scheduling</li>
+<li>[[Breadth-First Search|BFS]] in Graph algorithms that traverse layer by layer</li>
+<li>Network Packet Handling</li>
+<li>E-commerce order processing</li>
+<li>Print Queues</li>
+</ul>
+<h1>Implementations</h1>
+<p><a href="https://github.com/mc-0/DSA/tree/main/src/datastructures/queues">Array &amp; Linked List Queue Implementations</a></p>
+<h1>Resources</h1>

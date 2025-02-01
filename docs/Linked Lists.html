@@ -1,0 +1,38 @@
+<p><img src="https://github.com/user-attachments/assets/6c7d148a-3022-4aef-9714-0fcd7b3ed15a" alt="LLdrawio" /></p>
+<h1>Attributes</h1>
+<ol>
+<li><strong>Dynamic Size</strong>: Unlike arrays, linked lists grow and shrink dynamically with insertions and deletions.</li>
+<li><strong>Non-contiguous Memory</strong>: Elements are stored in non-contiguous memory locations, linked using pointers.</li>
+<li><strong>Efficient Insertions/Deletions</strong>: Insertions and deletions at the beginning or middle of a linked list are efficient (O(1) for head insertions).</li>
+<li><strong>Sequential Access</strong>: No direct access to elements; must traverse from the head to access any node (O(n) for access).</li>
+<li><strong>Extra Memory for Pointers</strong>: Each node stores data and a pointer (or multiple pointers in doubly linked lists) to the next node, requiring extra memory.</li>
+<li><strong>Variations</strong>: Includes singly linked lists, doubly linked lists, and circular linked lists.</li>
+</ol>
+<h1>Operations</h1>
+<p>|               |       Singly-Linked        |  Doubly-Linked             |
+|---------------|---------------|---------------|
+| Insert @ Head |      O(1)         |       O(1)        |
+| Insert @ Tail|       O(n) / O(1)*        |      O(1)         |
+| Insert @ Specific Position |       O(n)        |       O(n)        |
+| Delete @ Head |        O(1)       |       O(1)        |
+| Delete @ Tail |      O(n) / O(1)*         |         O(1)      |
+| Delete @ Specific Position |      O(n)         |       O(n)        |
+| Search |       O(n)        |      O(n)         |
+| Traversal |       O(n)        |       O(n)        |
+| Reversal |       O(n)        |        O(n)       |
+| Backward Traversal |     <strong>N/A</strong>          |      O(n)         |</p>
+<p><em>Note: * - Singly Linked List tail operations can be O(1) if you maintain a tail pointer</em></p>
+<h1>Trade Offs</h1>
+<p>|  PRO             |    CON           |
+|---------------|---------------|
+| Dynamic in size | Memory overhead for pointers |
+|Efficient inserts / deletes (no shifting required | Sequential access (must start at head / tail |
+|                 | Poor cache performance as nodes are scatters in memory |</p>
+<h1>Common Uses</h1>
+<ul>
+<li>Dynamic memory management</li>
+<li>Stack &amp; Queue implementations</li>
+<li>Chaining in Hash Tables</li>
+</ul>
+<h1>Implementations</h1>
+<p><a href="https://github.com/mc-0/DSA/tree/main/src/datastructures/linkedlists">Singly, Doubly, &amp; Node</a></p>

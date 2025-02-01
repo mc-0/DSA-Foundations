@@ -1,0 +1,44 @@
+<ul>
+<li>
+<p><strong>Theta - Θ</strong> - Helps classify algorithms, describing the expected behavior of an algorithm for typical or average cases.</p>
+</li>
+<li>
+<p><strong>Omega - Ω</strong> - Develops lower bounds &amp; sets a minimum performance threshold that an algorithm must meet for all input.</p>
+</li>
+<li>
+<p><strong>Oh - O</strong> - Develops upper bounds &amp; provides a guarantee on the worst-case performance for all inputs.</p>
+</li>
+</ul>
+<h1>Independent vs. Dependent Factors</h1>
+<ul>
+<li>
+<p>Independent:</p>
+<ul>
+<li>Algorithm Design</li>
+<li>Input Data</li>
+</ul>
+</li>
+<li>
+<p>Dependent:</p>
+<ul>
+<li>Hardware (CPU, Memory, etc.)</li>
+<li>Software (Compiler, Interpreter, etc.)</li>
+<li>System (OS, Network, etc.)</li>
+</ul>
+</li>
+</ul>
+<h1>Analyzing Algorithm Performance</h1>
+<p>The goal is to generalize by ignoring lower order terms, but be mindful of:</p>
+<ol>
+<li>Cost &amp; frequency of operations</li>
+<li>Loops</li>
+<li>Function calls / Recursive calls</li>
+<li>if-else &amp; switch statements</li>
+<li>Data structures used &amp; their operations</li>
+<li>Input size</li>
+</ol>
+<p><img src="https://github.com/user-attachments/assets/8f06a6e4-0b8d-4e3f-9eb4-00f848489334" alt="bigO" /></p>
+<p>|          | Constant  | Logarithmic   | Linear | Linearithmic | Quadratic        | Cubic            | Exponential       |
+|----------|-----------|---------------|--------|--------------|------------------|------------------|-------------------|
+| Big-O:   | O(1)      | O(log(n))     | O(n)   | O(nlog(n))   | O(n<sup>2</sup>) | O(n<sup>3</sup>) | O(2<sup>n</sup>)  |
+| Example: | Statement | Binary Search | Loop   | Merge Sort   | 2 Nested Loop    | 3 Nested Loops   | Exhaustive Search |</p>

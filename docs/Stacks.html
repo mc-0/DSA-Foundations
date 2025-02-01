@@ -1,0 +1,36 @@
+<p><img src="https://github.com/user-attachments/assets/b4daeed4-f2a2-4d00-9cf8-456b58174d17" alt="stack drawio2" /></p>
+<h1>Attributes</h1>
+<ul>
+<li>LIFO Data Structure (Last In, First Out)</li>
+</ul>
+<h1>Operations</h1>
+<p>|               |               |
+|---------------|---------------|
+| Push |    O(1)     |
+| Pop |    O(1)     |
+| Peek |    O(1)     |
+| Size |    O(1)     |
+| IsEmpty |    O(1)     |</p>
+<h1>Trade Offs</h1>
+<h4>Array Implementation</h4>
+<p>| PRO |    CON |
+|----------|----------|
+| PRO | CON |
+|    Simple &amp; Fast due to direct indexing      |    Fixed size (could overflow)   |
+|     Good Cache Performance     |   Array resizing / copying can be costly       |</p>
+<h4>Linked List Implementation</h4>
+<p>| PRO |    CON |
+|----------|----------|
+|     Dynamic Size &amp; No Wasted Space     |  Memory Overhead |
+|      Easy To Implement    |  O(1) operations, but access might be slower due to non-contiguous memory allocation  |</p>
+<h1>Common Uses</h1>
+<ul>
+<li>Call stack (function call management)</li>
+<li>Undo mechanisms</li>
+<li>Syntax parsing</li>
+<li>DFS in Graph algorithms / backtracking</li>
+</ul>
+<h1>Implementations</h1>
+<p><a href="https://github.com/mc-0/DSA/tree/main/src/datastructures/stacks">Array &amp; Linked List Based Stacks</a></p>
+<h1>Resources</h1>
+<p><a href="https://www.youtube.com/watch?app=desktop&amp;v=ncPxL3via0c">Stack &amp; Queue Overview w/ Dijkstra's Two-Stack Algorithm</a></p>

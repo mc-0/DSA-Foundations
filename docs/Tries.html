@@ -1,0 +1,40 @@
+<p><img src="https://github.com/user-attachments/assets/a4fdc05a-efee-44ac-88b8-ab3099090f43" alt="search1" /></p>
+<h1>Attributes</h1>
+<p>A Trie (also known as a prefix-tree) is a [[Trees|tree]]-like data structure that stores a dynamic set of strings, where the keys are usually strings. Tries are a powerful tool for problems involving strings or prefix-based queries. The core attributes of a Trie are:</p>
+<ul>
+<li><strong>Root Node</strong>: The starting point of the Trie, which doesn't contain a character but points to the first level of characters.</li>
+<li><strong>Children</strong>: Each node (except the root) contains a letter and has pointers to its children (next letters in possible strings).</li>
+<li><strong>End of Word Marker</strong>: Some nodes in the Trie are marked to indicate that they complete a valid word (commonly represented as a boolean flag).</li>
+<li><strong>Alphabet Size</strong>: A node can have multiple children, with the number of children typically determined by the size of the alphabet (e.g., 26 for lowercase English letters).</li>
+</ul>
+<h1>Operations</h1>
+<p>| <strong>Operation</strong>          | <strong>Time Complexity</strong> |
+|------------------------|---------------------|
+| Insertion of a word     | O(m)                |
+| Search for a word       | O(m)                |
+| Delete a word           | O(m)                |
+| Prefix search           | O(m)                |
+| Count Words of Given Prefix | O(m + k) |
+| Auto-Completion | O(m + k * n) |</p>
+<ul>
+<li><strong>m</strong>: the length</li>
+<li><strong>k</strong>: the number of strings with that prefix</li>
+<li><strong>n</strong>: the average length of the strings</li>
+</ul>
+<h1>Trade Offs</h1>
+<p>| <strong>PRO</strong>                                                | <strong>CON</strong>                                                |
+|--------------------------------------------------------|--------------------------------------------------------|
+| Efficient prefix searching (e.g., for autocomplete).   | High memory usage, especially for large alphabets.      |
+| Can search and insert in O(m) time regardless of input size. | More complex implementation compared to hash-based approaches. |
+| Handles prefixes better than hash maps.                | Difficult to use for non-string data types.             |
+| Can be used for dynamic datasets with changing word sets. | Space overhead can grow large if words share few prefixes. |</p>
+<h1>Common Uses</h1>
+<ol>
+<li><strong>Autocomplete Systems</strong>: Tries are frequently used in search engines and text editors for word autocompletion, where users type part of a word and the system suggests completions.</li>
+<li><strong>Spell Checkers</strong>: Tries help efficiently search for words and find the closest match for misspelled words.</li>
+<li><strong>IP Routing (Longest Prefix Matching)</strong>: Tries are used in network routers to find the longest prefix that matches an IP address.</li>
+<li><strong>Dictionary/Prefix Search Applications</strong>: Any application that requires efficient prefix searching or starts with a common prefix.</li>
+<li><strong>DNA Sequence Matching</strong>: Tries are used in bioinformatics to search for patterns in DNA sequences.</li>
+</ol>
+<h1>Implementations</h1>
+<p><a href="https://github.com/mc-0/DSA/tree/main/src/datastructures/tries">Trie Implementation</a></p>
