@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'vault/**/*.md'  # Only trigger on markdown files in your vault
+      - 'vault/DSA/**/*.md'  # Match all markdown files in DSA and its subdirectories
 
 jobs:
   build:
