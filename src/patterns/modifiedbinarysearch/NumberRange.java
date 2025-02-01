@@ -1,6 +1,7 @@
 package patterns.modifiedbinarysearch;
 // Time: O(logN)
 //Space: O(1)
+// 34. Find First and Last Position of Element in Sorted Array
 public class NumberRange {
 
     public static int[] findRange(int[] arr, int key) {

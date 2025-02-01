@@ -1,0 +1,39 @@
+name: Convert Markdown to HTML
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'vault/**/*.md'  # Only trigger on markdown files in your vault
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Install markdown-it
+        run: npm install markdown-it
+
+      - name: Convert Markdown files to HTML
+        run: |
+          mkdir -p docs
+          for file in vault/**/*.md; do
+            markdown-it "$file" > "docs/$(basename "${file%.md}.html")"
+          done
+
+      - name: Commit converted HTML files
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add docs/
+          git commit -m "Update HTML files for GitHub Pages"
+          git push
