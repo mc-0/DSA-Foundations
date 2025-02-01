@@ -2,7 +2,7 @@
 
 # Overview
 
-Union Find [UF] (also known as Disjoint Set Union, DSU) is a data structure that efficiently supports two operations on a collection of disjoint sets: **union** (merging two sets) and **find** (determining which set an element belongs to). It is primarily used for handling dynamic connectivity problems.
+Union Find (also known as Disjoint Set Union, DSU) is a data structure that efficiently supports two operations on a collection of disjoint sets: **union** (merging two sets) and **find** (determining which set an element belongs to). It is primarily used for handling dynamic connectivity problems.
 
 # Key Characteristics
 
