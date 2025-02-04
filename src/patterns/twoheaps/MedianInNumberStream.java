@@ -1,6 +1,5 @@
 package patterns.twoheaps;
 
-import java.util.Collections;
 import java.util.PriorityQueue;
 
 // Space: O(n) - Have to store all the numbers

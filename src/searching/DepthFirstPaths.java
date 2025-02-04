@@ -1,7 +1,7 @@
 package searching;
 
-import edu.princeton.cs.algs4.Stack;
 import edu.princeton.cs.algs4.Graph;
+import edu.princeton.cs.algs4.Stack;
 
 /*
     Generalized Approach to Depth First Search

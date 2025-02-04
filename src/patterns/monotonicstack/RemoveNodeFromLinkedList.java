@@ -2,7 +2,6 @@ package patterns.monotonicstack;
 
 import datastructures.linkedlists.ListNode;
 
-import java.util.List;
 import java.util.Stack;
 
 public class RemoveNodeFromLinkedList {

@@ -1,7 +1,5 @@
 package datastructures.trees;
 
-import datastructures.linkedlists.SinglyLinkedList;
-
 public class Tree<T> {
 
     private Node root;

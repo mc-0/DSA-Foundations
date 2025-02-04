@@ -1,7 +1,6 @@
 package patterns.fastslowpointers;
 
 import datastructures.linkedlists.ListNode;
-import datastructures.linkedlists.SinglyLinkedList;
 
 public class CyclicLinkedList {
 

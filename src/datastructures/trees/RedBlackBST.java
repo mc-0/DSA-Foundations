@@ -1,6 +1,8 @@
 package datastructures.trees;
-import java.util.NoSuchElementException;
+
 import datastructures.queues.Queue;
+
+import java.util.NoSuchElementException;
 
 public class RedBlackBST<Key extends Comparable<Key>, Value> {
 

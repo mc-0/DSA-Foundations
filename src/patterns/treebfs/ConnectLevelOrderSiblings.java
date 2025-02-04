@@ -1,7 +1,6 @@
 package patterns.treebfs;
 
 import datastructures.trees.NextTreeNode;
-import datastructures.trees.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;

@@ -2,9 +2,6 @@ package patterns.fastslowpointers;
 
 import datastructures.linkedlists.ListNode;
 
-import java.util.List;
-import java.util.Stack;
-
 public class PalindromeList {
 
     public static boolean checkIfListIsPalindrome(ListNode head) {
