@@ -2,8 +2,6 @@ package patterns.reverselinkedlist;
 
 import datastructures.linkedlists.ListNode;
 
-import static patterns.reverselinkedlist.ReverseLinkedList.reverseList;
-
 public class ReverseSubList {
 
     public static ListNode reverse(ListNode head, int p, int q) {

@@ -1,6 +1,7 @@
 package patterns.arrays_and_hashing;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 // 36. Valid Sudoku
 public class ValidSudoku {

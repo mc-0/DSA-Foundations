@@ -1,4 +1,4 @@
-![img.png](misc/imgs/img.png)
+![img.png](misc/imgs/title.png)
 ## Overview
 Data structures and algorithms is a tremendously important topic within the realm of computer science. But it often only
 gets a lot of attention in the context of preparing for interviews within the software space. This sometimes comes across

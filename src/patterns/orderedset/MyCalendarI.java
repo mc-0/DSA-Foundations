@@ -1,7 +1,8 @@
 package patterns.orderedset;
 
-import java.lang.reflect.Array;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.TreeSet;
 
 // Time: O(logN)
 // Space: O(N)

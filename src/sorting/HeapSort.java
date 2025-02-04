@@ -1,7 +1,5 @@
 package sorting;
 
-import util.Helper;
-
 public class HeapSort {
 
     // This class should not be instantiated.

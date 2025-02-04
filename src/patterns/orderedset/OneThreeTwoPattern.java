@@ -1,6 +1,5 @@
 package patterns.orderedset;
 
-import java.util.PriorityQueue;
 import java.util.TreeSet;
 
 // Time: O(NLogN)

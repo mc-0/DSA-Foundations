@@ -1,6 +1,5 @@
 package patterns.topkelements;
 
-import java.util.Objects;
 import java.util.PriorityQueue;
 
 // For Add Method:

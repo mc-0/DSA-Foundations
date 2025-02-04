@@ -1,7 +1,5 @@
 package patterns.bitwisexor;
 
-import java.util.Arrays;
-
 // Time: O(n)
 // Space: O(1)
 public class SingleNumber {

@@ -1,11 +1,8 @@
 package sorting;
 
 
-import datastructures.heaps.MaxHeap;
-import util.CollectionUtil;
-
 import java.io.FileNotFoundException;
-import java.util.*;
+import java.util.Arrays;
 
 public class SortingClient {
 
