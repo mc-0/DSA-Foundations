@@ -23,8 +23,6 @@
 hs_err_pid*
 replay_pid*
 
-Main
-src/Main.java
 .idea/vcs.xml
 .idea/
 DSA.iml
