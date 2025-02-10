@@ -1,7 +1,9 @@
 package main.patterns.bitwisexor;
-
-// Time: O(n)
-// Space: O(1)
+/*
+136. Single Number
+Time: O(n)
+Space: O(1)
+*/
 public class SingleNumber {
 
     public static int findSingleNumber(int[] nums) {

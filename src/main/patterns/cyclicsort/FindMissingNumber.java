@@ -2,10 +2,13 @@ package main.patterns.cyclicsort;
 
 import main.util.Helper;
 
+/*
+268. Missing Number
+Time: O(N)
+Space: O(1)
+*/
 public class FindMissingNumber {
 
-    // Time: O(N)
-    // Space: O(1)
     public static int findMissingNumber(int[] nums) {
         int i = 0;
         while (i < nums.length) {
