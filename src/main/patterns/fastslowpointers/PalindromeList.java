@@ -1,7 +1,11 @@
 package main.patterns.fastslowpointers;
 
 import main.datastructures.linkedlists.ListNode;
-
+/*
+234. Palindrome Linked List
+Time: O(n)
+Space: O(1)
+*/
 public class PalindromeList {
 
     public static boolean checkIfListIsPalindrome(ListNode head) {

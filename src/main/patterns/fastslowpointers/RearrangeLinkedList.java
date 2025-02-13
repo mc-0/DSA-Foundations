@@ -1,7 +1,11 @@
 package main.patterns.fastslowpointers;
 
 import main.datastructures.linkedlists.ListNode;
-
+/*
+143. Reorder List
+Time: O(n)
+Space: O(1)
+*/
 public class RearrangeLinkedList {
 
     public static ListNode rearrangeLinkedList(ListNode head) {
