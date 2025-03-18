@@ -9,7 +9,8 @@ package main.searching;
     4. 
  */
 
-import main.datastructures.graphs.algs4.Graph;
+
+import edu.princeton.cs.algs4.Graph;
 import main.datastructures.stacks.Stack;
 
 public class DepthFirstPaths {
