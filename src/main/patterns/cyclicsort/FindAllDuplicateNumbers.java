@@ -5,10 +5,13 @@ import java.util.List;
 
 import static main.util.Helper.swap;
 
+/*
+442. Find All Duplicates in an Array
+Time: O(N)
+Space: O(1)
+*/
 public class FindAllDuplicateNumbers {
 
-    // Time: O(N)
-    // Space: O(1)
     public static List<Integer> findNumbers(int[] nums) {
         List<Integer> duplicateNumbers = new ArrayList<>();
         int i = 0;

@@ -1,7 +1,11 @@
 package main.patterns.fastslowpointers;
 
 import java.util.HashSet;
-
+/*
+202. Happy Number
+Time: O(1)
+Space: O(1)
+*/
 public class HappyNumber {
 
     // The slow pointer travels the list 1 at a time, calculating the squared sum at each step

@@ -1,8 +1,16 @@
 package main.patterns.fastslowpointers;
 
 import main.datastructures.linkedlists.ListNode;
-
+/*
+142. Linked List Cycle II
+Time: O(n)
+Space: O(1)
+*/
 public class FindCycleStart {
+
+    public ListNode detectCycle(ListNode head) {
+        return findCycleStart(head);
+    }
 
     public static ListNode findCycleStart(ListNode head) {
         ListNode slow = head, fast = head;
@@ -14,6 +22,9 @@ public class FindCycleStart {
                 cycleCount = findCycleCount(slow);
                 break;
             }
+        }
+        if (fast == null || fast.next == null) {
+            return null;
         }
         return findStart(head, cycleCount);
     }

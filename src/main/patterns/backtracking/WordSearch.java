@@ -1,6 +1,9 @@
 package main.patterns.backtracking;
-// Time: O(4^N)
-// Space: O(N)
+/*
+79. Word Search
+Time: O(4^N)
+Space: O(N)
+*/
 public class WordSearch {
 
     public static boolean exist(char[][] board, String word) {

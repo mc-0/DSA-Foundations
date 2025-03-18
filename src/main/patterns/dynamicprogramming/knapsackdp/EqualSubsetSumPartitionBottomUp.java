@@ -1,7 +1,10 @@
 package main.patterns.dynamicprogramming.knapsackdp;
 
-// Time: O(N*S)
-// Space: O(N*S)
+/*
+416. Partition Equal Subset Sum
+Time: O(N*S)
+Space: O(N*S)
+*/
 public class EqualSubsetSumPartitionBottomUp {
 
     public boolean canPartition(int[] num) {

@@ -1,7 +1,11 @@
 package main.patterns.fastslowpointers;
 
 import main.datastructures.linkedlists.ListNode;
-
+/*
+141. Linked List Cycle
+Time: O(n)
+Space: O(1)
+*/
 public class CyclicLinkedList {
 
     public static boolean findCycle(ListNode<Integer> head) {
