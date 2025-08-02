@@ -1,61 +1,183 @@
-<h3>Understand</h3>
-<ol>
-<li>
-<p>Read &amp; Understand the Problem</p>
-<ul>
-<li>Note Constraints / Limitations</li>
-</ul>
-</li>
-<li>
-<p>Verify Inputs / Outputs</p>
-<ul>
-<li>Consider Time &amp; Space Complexity</li>
-</ul>
-</li>
-<li>
-<p>Clarify Ambiguity / Edge Cases</p>
-<ul>
-<li>Ask Questions</li>
-</ul>
-</li>
-</ol>
-<h3>Plan</h3>
-<ol>
-<li>
-<p>Break the Problem Down Into Smaller Parts</p>
-<ul>
-<li>Consider various approaches</li>
-<li>Think about potential data structures &amp; algorithms that might fit the problem</li>
-</ul>
-</li>
-<li>
-<p>Create a Rough Draft / Pseudocode For The Approach</p>
-<ul>
-<li>Identify how you will handle various edge cases</li>
-</ul>
-</li>
-</ol>
-<h3>Solve</h3>
-<ol>
-<li>
-<p>Implement the Solution Using the Plan / Rough Draft</p>
-</li>
-<li>
-<p>Test the solution with various inputs (normal, boundaries, edge cases, etc.)</p>
-</li>
-<li>
-<p>Analyze Performance - [[Asymptotic Analysis|Time &amp; Space Complexity]]</p>
-</li>
-</ol>
-<h3>Review</h3>
-<ol>
-<li>
-<p>Review &amp; Explain Your Solution</p>
-<ul>
-<li>Discuss improvements &amp; alternative solutions</li>
-</ul>
-</li>
-<li>
-<p>Optimize &amp; refactor if necessary (i.e., due to follow-up question(s))</p>
-</li>
-</ol>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem-Solving Approach - DSA Foundations</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #e6edf3;
+            background-color: #0d1117;
+            max-width: 1012px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        
+        h1 {
+            color: #f0f6fc;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 0.3em;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            font-size: 2em;
+        }
+        
+        h2 {
+            color: #f0f6fc;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            font-size: 1.5em;
+        }
+        
+        h3 {
+            color: #f0f6fc;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            font-size: 1.25em;
+        }
+        
+        ul, ol {
+            padding-left: 2em;
+        }
+        
+        li {
+            margin-bottom: 0.25em;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #58a6ff;
+        }
+        
+        em {
+            color: #79c0ff;
+            font-style: italic;
+        }
+        
+        p {
+            margin-bottom: 16px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 16px 0;
+            border-radius: 6px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 16px 0;
+            display: table;
+            background-color: #0d1117;
+        }
+        
+        th, td {
+            border: 1px solid #30363d;
+            padding: 6px 13px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #21262d;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(2n) {
+            background-color: #161b22;
+        }
+        
+        code {
+            background-color: rgba(110, 118, 129, 0.4);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+            font-size: 85%;
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+        
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Problem-Solving Approach</h1>
+    
+    <h3>Understand</h3>
+    <ol>
+        <li>
+            <p><strong>Read & Understand the Problem</strong></p>
+            <ul>
+                <li>Note Constraints / Limitations</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Verify Inputs / Outputs</strong></p>
+            <ul>
+                <li>Consider Time & Space Complexity</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Clarify Ambiguity / Edge Cases</strong></p>
+            <ul>
+                <li>Ask Questions</li>
+            </ul>
+        </li>
+    </ol>
+    
+    <h3>Plan</h3>
+    <ol>
+        <li>
+            <p><strong>Break the Problem Down Into Smaller Parts</strong></p>
+            <ul>
+                <li>Consider various approaches</li>
+                <li>Think about potential data structures & algorithms that might fit the problem</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Create a Rough Draft / Pseudocode For The Approach</strong></p>
+            <ul>
+                <li>Identify how you will handle various edge cases</li>
+            </ul>
+        </li>
+    </ol>
+    
+    <h3>Solve</h3>
+    <ol>
+        <li>
+            <p><strong>Implement the Solution Using the Plan / Rough Draft</strong></p>
+        </li>
+        <li>
+            <p><strong>Test the solution with various inputs (normal, boundaries, edge cases, etc.)</strong></p>
+        </li>
+        <li>
+            <p><strong>Analyze Performance - Time & Space Complexity</strong></p>
+        </li>
+    </ol>
+    
+    <h3>Review</h3>
+    <ol>
+        <li>
+            <p><strong>Review & Explain Your Solution</strong></p>
+            <ul>
+                <li>Discuss improvements & alternative solutions</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Optimize & refactor if necessary (i.e., due to follow-up question(s))</strong></p>
+        </li>
+    </ol>
+</body>
+</html>

@@ -1,44 +1,213 @@
-<ul>
-<li>
-<p><strong>Theta - Θ</strong> - Helps classify algorithms, describing the expected behavior of an algorithm for typical or average cases.</p>
-</li>
-<li>
-<p><strong>Omega - Ω</strong> - Develops lower bounds &amp; sets a minimum performance threshold that an algorithm must meet for all input.</p>
-</li>
-<li>
-<p><strong>Oh - O</strong> - Develops upper bounds &amp; provides a guarantee on the worst-case performance for all inputs.</p>
-</li>
-</ul>
-<h1>Independent vs. Dependent Factors</h1>
-<ul>
-<li>
-<p>Independent:</p>
-<ul>
-<li>Algorithm Design</li>
-<li>Input Data</li>
-</ul>
-</li>
-<li>
-<p>Dependent:</p>
-<ul>
-<li>Hardware (CPU, Memory, etc.)</li>
-<li>Software (Compiler, Interpreter, etc.)</li>
-<li>System (OS, Network, etc.)</li>
-</ul>
-</li>
-</ul>
-<h1>Analyzing Algorithm Performance</h1>
-<p>The goal is to generalize by ignoring lower order terms, but be mindful of:</p>
-<ol>
-<li>Cost &amp; frequency of operations</li>
-<li>Loops</li>
-<li>Function calls / Recursive calls</li>
-<li>if-else &amp; switch statements</li>
-<li>Data structures used &amp; their operations</li>
-<li>Input size</li>
-</ol>
-<p><img src="https://github.com/user-attachments/assets/8f06a6e4-0b8d-4e3f-9eb4-00f848489334" alt="bigO" /></p>
-<p>|          | Constant  | Logarithmic   | Linear | Linearithmic | Quadratic        | Cubic            | Exponential       |
-|----------|-----------|---------------|--------|--------------|------------------|------------------|-------------------|
-| Big-O:   | O(1)      | O(log(n))     | O(n)   | O(nlog(n))   | O(n<sup>2</sup>) | O(n<sup>3</sup>) | O(2<sup>n</sup>)  |
-| Example: | Statement | Binary Search | Loop   | Merge Sort   | 2 Nested Loop    | 3 Nested Loops   | Exhaustive Search |</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asymptotic Analysis - DSA Foundations</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #e6edf3;
+            background-color: #0d1117;
+            max-width: 1012px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        
+        h1 {
+            color: #f0f6fc;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 0.3em;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            font-size: 2em;
+        }
+        
+        h2 {
+            color: #f0f6fc;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            font-size: 1.5em;
+        }
+        
+        ul, ol {
+            padding-left: 2em;
+        }
+        
+        li {
+            margin-bottom: 0.25em;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 16px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 16px 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 16px 0;
+            display: table;
+        }
+        
+        th, td {
+            border: 1px solid #30363d;
+            padding: 6px 13px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #21262d;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(2n) {
+            background-color: #161b22;
+        }
+        
+        code {
+            background-color: rgba(110, 118, 129, 0.4);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+            font-size: 85%;
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+        
+        .notation-list {
+            background-color: #161b22;
+            border-left: 4px solid #1f6feb;
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 6px;
+        }
+        
+        .factors-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        
+        .factor-box {
+            background-color: #161b22;
+            padding: 16px;
+            border-radius: 6px;
+            border: 1px solid #30363d;
+        }
+        
+        .factor-box h3 {
+            margin-top: 0;
+            color: #f0f6fc;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .factors-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Asymptotic Analysis</h1>
+    
+    <div class="notation-list">
+        <h2>Big-O Notation Types</h2>
+        <ul>
+            <li>
+                <p><strong>Theta - Θ</strong> - Helps classify algorithms, describing the expected behavior of an algorithm for typical or average cases.</p>
+            </li>
+            <li>
+                <p><strong>Omega - Ω</strong> - Develops lower bounds &amp; sets a minimum performance threshold that an algorithm must meet for all input.</p>
+            </li>
+            <li>
+                <p><strong>Oh - O</strong> - Develops upper bounds &amp; provides a guarantee on the worst-case performance for all inputs.</p>
+            </li>
+        </ul>
+    </div>
+
+    <h2>Independent vs. Dependent Factors</h2>
+    <div class="factors-section">
+        <div class="factor-box">
+            <h3>Independent:</h3>
+            <ul>
+                <li>Algorithm Design</li>
+                <li>Input Data</li>
+            </ul>
+        </div>
+        <div class="factor-box">
+            <h3>Dependent:</h3>
+            <ul>
+                <li>Hardware (CPU, Memory, etc.)</li>
+                <li>Software (Compiler, Interpreter, etc.)</li>
+                <li>System (OS, Network, etc.)</li>
+            </ul>
+        </div>
+    </div>
+
+    <h2>Analyzing Algorithm Performance</h2>
+    <p>The goal is to generalize by ignoring lower order terms, but be mindful of:</p>
+    <ol>
+        <li>Cost &amp; frequency of operations</li>
+        <li>Loops</li>
+        <li>Function calls / Recursive calls</li>
+        <li>if-else &amp; switch statements</li>
+        <li>Data structures used &amp; their operations</li>
+        <li>Input size</li>
+    </ol>
+    
+    <img src="https://github.com/user-attachments/assets/8f06a6e4-0b8d-4e3f-9eb4-00f848489334" alt="Big-O Complexity Chart" />
+    
+    <h2>Complexity Comparison</h2>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Constant</th>
+                <th>Logarithmic</th>
+                <th>Linear</th>
+                <th>Linearithmic</th>
+                <th>Quadratic</th>
+                <th>Cubic</th>
+                <th>Exponential</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Big-O:</strong></td>
+                <td><code>O(1)</code></td>
+                <td><code>O(log(n))</code></td>
+                <td><code>O(n)</code></td>
+                <td><code>O(nlog(n))</code></td>
+                <td><code>O(n<sup>2</sup>)</code></td>
+                <td><code>O(n<sup>3</sup>)</code></td>
+                <td><code>O(2<sup>n</sup>)</code></td>
+            </tr>
+            <tr>
+                <td><strong>Example:</strong></td>
+                <td>Statement</td>
+                <td>Binary Search</td>
+                <td>Loop</td>
+                <td>Merge Sort</td>
+                <td>2 Nested Loop</td>
+                <td>3 Nested Loops</td>
+                <td>Exhaustive Search</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,54 +1,226 @@
-<p><img src="https://github.com/user-attachments/assets/10bfa27c-1183-4718-8d5b-3e6c089dc59f" alt="picture2" /></p>
-<h1>Attributes</h1>
-<p>A Heap is a specialized binary tree-based data structure that satisfies the heap property:</p>
-<ul>
-<li>Min-Heap: The value of each node is less than or equal to the values of its children. Hence, the smallest element is at the root.</li>
-<li>Max-Heap: The value of each node is greater than or equal to the values of its children. Hence, the largest element is at the root.</li>
-</ul>
-<p>Additional Attributes:</p>
-<ul>
-<li>Complete Binary Tree: Heaps are complete binary trees, meaning all levels are fully filled except possibly the last, which is filled from left to right.</li>
-<li>Efficiently Implemented Using Arrays: Heaps can be stored in arrays, where for a node at index i, its left child is at 2i + 1 and right child at 2i + 2.</li>
-</ul>
-<h1>Operations</h1>
-<p>| Operation            | Time Complexity | Description                                                        |
-|----------------------|-----------------|--------------------------------------------------------------------|
-| Insert (add element)  | O(log n)        | Insert an element at the end, then &quot;bubble up&quot; to maintain heap property. |
-| Extract-Min/Max       | O(log n)        | Remove the root (min or max), replace it with the last element, then &quot;heapify&quot;. |
-| Peek (Min/Max)        | O(1)            | Retrieve the root without removing it.                             |
-| Heapify (build heap)  | O(n)            | Convert an unsorted array into a heap (faster than n * O(log n)).   |
-| Delete                | O(log n)        | Remove an arbitrary element and restore the heap property.          |
-| Decrease/Increase Key | O(log n)        | Modify a key and adjust heap to restore the heap property.          |
-| Build Heap | O(n) | Creating a heap from an unsorted array |</p>
-<h1>Trade Offs</h1>
-<p>| PRO                                        | CON                                                          |
-|--------------------------------------------|---------------------------------------------------------------|
-| Efficient O(1) access to min/max element    | Limited to fast access only for min/max; not suitable for arbitrary searches |
-| O(log n) insertions and deletions          | Insertion/removal is slower than simpler structures like arrays or linked lists |
-| Space-efficient array representation       | Not as flexible or easy to traverse as other binary tree structures |
-| Optimal for priority queue operations      | Less efficient for full main.sorting compared to some other algorithms (e.g., Quicksort) |
-| Useful in graph algorithms (Dijkstra, Prim) | Heap operations can become costly if constant rebalancing is needed in dynamic scenarios |</p>
-<h1>Common Uses</h1>
-<ol>
-<li>
-<p><strong>Priority Queues</strong>: Heaps are widely used to implement priority queues, where elements are dequeued based on priority (min or max).</p>
-</li>
-<li>
-<p><strong>Graph Algorithms</strong>:</p>
-<ul>
-<li><strong>Dijkstra's Algorithm</strong>: Min-heaps are used to efficiently fetch the next closest node.</li>
-<li><strong>Prim's Algorithm</strong>: Heaps help efficiently select the minimum-weight edge.</li>
-</ul>
-</li>
-<li>
-<p><strong>Heap Sort</strong>: Heaps can be used to sort data in O(n log n) time through Heapsort. This involves building a min/max heap &amp; then extracting the next min/max element to produce a sorted array.</p>
-</li>
-<li>
-<p><strong>Scheduling Systems</strong>: Heaps can manage tasks with varying priorities in operating systems or task schedulers.</p>
-</li>
-<li>
-<p><strong>Median Maintenance</strong>: Two heaps (a min-heap and a max-heap) can be used to maintain a dynamic set of numbers and quickly access the median.</p>
-</li>
-</ol>
-<h1>Implementations</h1>
-<p><a href="https://github.com/mc-0/DSA/blob/main/src/datastructures/heaps/Heap.java">Heap Implementation</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heaps - DSA Foundations</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #e6edf3;
+            background-color: #0d1117;
+            max-width: 1012px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        
+        h1 {
+            color: #f0f6fc;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 0.3em;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            font-size: 2em;
+        }
+        
+        h2 {
+            color: #f0f6fc;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            font-size: 1.5em;
+        }
+        
+        ul, ol {
+            padding-left: 2em;
+        }
+        
+        li {
+            margin-bottom: 0.25em;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #58a6ff;
+        }
+        
+        p {
+            margin-bottom: 16px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 16px 0;
+            border-radius: 6px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 16px 0;
+            display: table;
+            background-color: #0d1117;
+        }
+        
+        th, td {
+            border: 1px solid #30363d;
+            padding: 6px 13px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #21262d;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(2n) {
+            background-color: #161b22;
+        }
+        
+        code {
+            background-color: rgba(110, 118, 129, 0.4);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+            font-size: 85%;
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+        
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://github.com/user-attachments/assets/10bfa27c-1183-4718-8d5b-3e6c089dc59f" alt="Heap visualization" />
+    
+    <h1>Heaps</h1>
+    
+    <h2>Attributes</h2>
+    <p>A Heap is a specialized binary tree-based data structure that satisfies the heap property:</p>
+    <ul>
+        <li><strong>Min-Heap</strong>: The value of each node is less than or equal to the values of its children. Hence, the smallest element is at the root.</li>
+        <li><strong>Max-Heap</strong>: The value of each node is greater than or equal to the values of its children. Hence, the largest element is at the root.</li>
+    </ul>
+    
+    <p><strong>Additional Attributes:</strong></p>
+    <ul>
+        <li><strong>Complete Binary Tree</strong>: Heaps are complete binary trees, meaning all levels are fully filled except possibly the last, which is filled from left to right.</li>
+        <li><strong>Efficiently Implemented Using Arrays</strong>: Heaps can be stored in arrays, where for a node at index i, its left child is at 2i + 1 and right child at 2i + 2.</li>
+    </ul>
+    
+    <h2>Operations</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Operation</th>
+                <th>Time Complexity</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Insert (add element)</strong></td>
+                <td><code>O(log n)</code></td>
+                <td>Insert an element at the end, then "bubble up" to maintain heap property.</td>
+            </tr>
+            <tr>
+                <td><strong>Extract-Min/Max</strong></td>
+                <td><code>O(log n)</code></td>
+                <td>Remove the root (min or max), replace it with the last element, then "heapify".</td>
+            </tr>
+            <tr>
+                <td><strong>Peek (Min/Max)</strong></td>
+                <td><code>O(1)</code></td>
+                <td>Retrieve the root without removing it.</td>
+            </tr>
+            <tr>
+                <td><strong>Heapify (build heap)</strong></td>
+                <td><code>O(n)</code></td>
+                <td>Convert an unsorted array into a heap (faster than n * O(log n)).</td>
+            </tr>
+            <tr>
+                <td><strong>Delete</strong></td>
+                <td><code>O(log n)</code></td>
+                <td>Remove an arbitrary element and restore the heap property.</td>
+            </tr>
+            <tr>
+                <td><strong>Decrease/Increase Key</strong></td>
+                <td><code>O(log n)</code></td>
+                <td>Modify a key and adjust heap to restore the heap property.</td>
+            </tr>
+            <tr>
+                <td><strong>Build Heap</strong></td>
+                <td><code>O(n)</code></td>
+                <td>Creating a heap from an unsorted array</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Trade Offs</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>PRO</th>
+                <th>CON</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Efficient <code>O(1)</code> access to min/max element</td>
+                <td>Limited to fast access only for min/max; not suitable for arbitrary searches</td>
+            </tr>
+            <tr>
+                <td><code>O(log n)</code> insertions and deletions</td>
+                <td>Insertion/removal is slower than simpler structures like arrays or linked lists</td>
+            </tr>
+            <tr>
+                <td>Space-efficient array representation</td>
+                <td>Not as flexible or easy to traverse as other binary tree structures</td>
+            </tr>
+            <tr>
+                <td>Optimal for priority queue operations</td>
+                <td>Less efficient for full sorting compared to some other algorithms (e.g., Quicksort)</td>
+            </tr>
+            <tr>
+                <td>Useful in graph algorithms (Dijkstra, Prim)</td>
+                <td>Heap operations can become costly if constant rebalancing is needed in dynamic scenarios</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Common Uses</h2>
+    <ol>
+        <li>
+            <p><strong>Priority Queues</strong>: Heaps are widely used to implement priority queues, where elements are dequeued based on priority (min or max).</p>
+        </li>
+        <li>
+            <p><strong>Graph Algorithms</strong>:</p>
+            <ul>
+                <li><strong>Dijkstra's Algorithm</strong>: Min-heaps are used to efficiently fetch the next closest node.</li>
+                <li><strong>Prim's Algorithm</strong>: Heaps help efficiently select the minimum-weight edge.</li>
+            </ul>
+        </li>
+        <li>
+            <p><strong>Heap Sort</strong>: Heaps can be used to sort data in O(n log n) time through Heapsort. This involves building a min/max heap &amp; then extracting the next min/max element to produce a sorted array.</p>
+        </li>
+        <li>
+            <p><strong>Scheduling Systems</strong>: Heaps can manage tasks with varying priorities in operating systems or task schedulers.</p>
+        </li>
+        <li>
+            <p><strong>Median Maintenance</strong>: Two heaps (a min-heap and a max-heap) can be used to maintain a dynamic set of numbers and quickly access the median.</p>
+        </li>
+    </ol>
+    
+    <h2>Implementations</h2>
+    <p><a href="https://github.com/mc-0/DSA/blob/main/src/datastructures/heaps/Heap.java">Heap Implementation</a></p>
+</body>
+</html>
