@@ -1,41 +1,219 @@
-<img width="584" alt="hash-table" src="https://github.com/user-attachments/assets/1a427e26-78a8-45ca-bb87-9dc1f9d331b6">
-<h1>Attributes</h1>
-<ol>
-<li><em>Key-Value Pair Storage</em>: Hash tables store data in pairs of keys and values, where each key is unique.</li>
-<li><em>Hash Function</em>: A hash function is used to compute an index (hash code) from the key, determining where the key-value pair should be stored in the table.</li>
-<li><em>Collision Handling</em>: Since multiple keys can generate the same hash index, hash tables use techniques like chaining or open addressing to handle collisions.</li>
-<li><em>Fast Lookups</em>: Average-case time complexity for lookups, insertions, and deletions is O(1), due to direct index access provided by the hash function.</li>
-<li><em>Dynamic Size</em>: Hash tables resize dynamically (typically doubling the size) when the load factor (number of elements/size of table) crosses a threshold, ensuring efficient space usage.</li>
-<li><em>Load Factor</em>: This represents the level of fullness of the hash table and is crucial in deciding when to resize the table.</li>
-</ol>
-<h1>Operations</h1>
-<p>| <strong>Operation</strong>    | <strong>Description</strong>                                          | <strong>Time Complexity</strong> |
-|------------------|----------------------------------------------------------|---------------------|
-| <strong>Insert</strong>       | Adds a key-value pair to the table                        | O(1) average, O(n) worst case |
-| <strong>Search</strong>       | Finds the value associated with a given key               | O(1) average, O(n) worst case |
-| <strong>Delete</strong>       | Removes a key-value pair from the table                   | O(1) average, O(n) worst case |
-| <strong>Update</strong>       | Changes the value of an existing key                      | O(1) average, O(n) worst case |
-| <strong>Resize/Rehash</strong>| Increases the table size when the load factor is too high | O(n) when rehashing |
-| <strong>Collision Handling</strong> | Handles conflicts caused by multiple keys hashing to the same index | O(1) with effective collision resolution |</p>
-<h1>Trade Offs</h1>
-<p>| <strong>Pros</strong>                                           | <strong>Cons</strong>                                            |
-|----------------------------------------------------|-----------------------------------------------------|
-| Average O(1) time complexity for insert, search, and delete | Worst-case time complexity is O(n) due to collisions |
-| Efficient memory usage with dynamic resizing       | Requires a good hash function to minimize collisions |
-| Supports fast lookups for large datasets           | Resizing and rehashing can be expensive (O(n))       |
-| Simple to implement for common operations          | Not suitable for ordered data (cannot traverse in order) |
-| Useful in various applications like caching, dictionaries | Inefficient for small datasets compared to simpler data structures like arrays or linked lists |
-| Flexible storage of diverse types of data (key-value pairs) | Poor memory locality due to potential collisions and chaining |
-| No need to maintain sorted data                    | Susceptible to clustering in some probing methods (e.g., linear probing) |</p>
-<h1>Common Uses</h1>
-<ol>
-<li><em>Databases (Indexing)</em>: Hash tables are widely used in databases to index records for fast lookups of data.</li>
-<li><em>Caching</em>: Hash tables are used in caches to store frequently accessed data with quick access times (e.g., LRU Cache).</li>
-<li><em>Dictionaries/Maps</em>: They are the underlying data structure for implementing associative arrays (dictionaries in Python, HashMap in Java, etc.).</li>
-<li><em>Symbol Tables</em>: In compilers or interpreters, hash tables are used to store variable bindings.</li>
-<li><em>Routing Tables</em>: Hash tables are used in networking to store and retrieve routes efficiently.</li>
-<li><em>Sets</em>: In some programming languages, hash tables are used to implement sets, which support fast membership tests.</li>
-<li><em>Counting Frequencies</em>: Hash tables can be used to count occurrences of items, such as words in a document.</li>
-</ol>
-<h1>Implementations</h1>
-<p><a href="https://github.com/mc-0/DSA/tree/main/src/datastructures/hashtables">Hash Tables</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Tables - DSA Foundations</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #e6edf3;
+            background-color: #0d1117;
+            max-width: 1012px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        
+        h1 {
+            color: #f0f6fc;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 0.3em;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            font-size: 2em;
+        }
+        
+        h2 {
+            color: #f0f6fc;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            font-size: 1.5em;
+        }
+        
+        ul, ol {
+            padding-left: 2em;
+        }
+        
+        li {
+            margin-bottom: 0.25em;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #58a6ff;
+        }
+        
+        em {
+            color: #79c0ff;
+            font-style: italic;
+        }
+        
+        p {
+            margin-bottom: 16px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 16px 0;
+            border-radius: 6px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 16px 0;
+            display: table;
+            background-color: #0d1117;
+        }
+        
+        th, td {
+            border: 1px solid #30363d;
+            padding: 6px 13px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #21262d;
+            font-weight: 600;
+        }
+        
+        tr:nth-child(2n) {
+            background-color: #161b22;
+        }
+        
+        code {
+            background-color: rgba(110, 118, 129, 0.4);
+            padding: 0.2em 0.4em;
+            border-radius: 6px;
+            font-size: 85%;
+            font-family: ui-monospace, SFMono-Regular, 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
+        }
+        
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <img width="584" alt="hash-table" src="https://github.com/user-attachments/assets/1a427e26-78a8-45ca-bb87-9dc1f9d331b6">
+    
+    <h1>Hash Tables</h1>
+    
+    <h2>Attributes</h2>
+    <ol>
+        <li><em>Key-Value Pair Storage</em>: Hash tables store data in pairs of keys and values, where each key is unique.</li>
+        <li><em>Hash Function</em>: A hash function is used to compute an index (hash code) from the key, determining where the key-value pair should be stored in the table.</li>
+        <li><em>Collision Handling</em>: Since multiple keys can generate the same hash index, hash tables use techniques like chaining or open addressing to handle collisions.</li>
+        <li><em>Fast Lookups</em>: Average-case time complexity for lookups, insertions, and deletions is O(1), due to direct index access provided by the hash function.</li>
+        <li><em>Dynamic Size</em>: Hash tables resize dynamically (typically doubling the size) when the load factor (number of elements/size of table) crosses a threshold, ensuring efficient space usage.</li>
+        <li><em>Load Factor</em>: This represents the level of fullness of the hash table and is crucial in deciding when to resize the table.</li>
+    </ol>
+    
+    <h2>Operations</h2>
+    <table>
+        <thead>
+            <tr>
+                <th><strong>Operation</strong></th>
+                <th><strong>Description</strong></th>
+                <th><strong>Time Complexity</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Insert</strong></td>
+                <td>Adds a key-value pair to the table</td>
+                <td><code>O(1)</code> average, <code>O(n)</code> worst case</td>
+            </tr>
+            <tr>
+                <td><strong>Search</strong></td>
+                <td>Finds the value associated with a given key</td>
+                <td><code>O(1)</code> average, <code>O(n)</code> worst case</td>
+            </tr>
+            <tr>
+                <td><strong>Delete</strong></td>
+                <td>Removes a key-value pair from the table</td>
+                <td><code>O(1)</code> average, <code>O(n)</code> worst case</td>
+            </tr>
+            <tr>
+                <td><strong>Update</strong></td>
+                <td>Changes the value of an existing key</td>
+                <td><code>O(1)</code> average, <code>O(n)</code> worst case</td>
+            </tr>
+            <tr>
+                <td><strong>Resize/Rehash</strong></td>
+                <td>Increases the table size when the load factor is too high</td>
+                <td><code>O(n)</code> when rehashing</td>
+            </tr>
+            <tr>
+                <td><strong>Collision Handling</strong></td>
+                <td>Handles conflicts caused by multiple keys hashing to the same index</td>
+                <td><code>O(1)</code> with effective collision resolution</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Trade Offs</h2>
+    <table>
+        <thead>
+            <tr>
+                <th><strong>Pros</strong></th>
+                <th><strong>Cons</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Average <code>O(1)</code> time complexity for insert, search, and delete</td>
+                <td>Worst-case time complexity is <code>O(n)</code> due to collisions</td>
+            </tr>
+            <tr>
+                <td>Efficient memory usage with dynamic resizing</td>
+                <td>Requires a good hash function to minimize collisions</td>
+            </tr>
+            <tr>
+                <td>Supports fast lookups for large datasets</td>
+                <td>Resizing and rehashing can be expensive <code>O(n)</code></td>
+            </tr>
+            <tr>
+                <td>Simple to implement for common operations</td>
+                <td>Not suitable for ordered data (cannot traverse in order)</td>
+            </tr>
+            <tr>
+                <td>Useful in various applications like caching, dictionaries</td>
+                <td>Inefficient for small datasets compared to simpler data structures like arrays or linked lists</td>
+            </tr>
+            <tr>
+                <td>Flexible storage of diverse types of data (key-value pairs)</td>
+                <td>Poor memory locality due to potential collisions and chaining</td>
+            </tr>
+            <tr>
+                <td>No need to maintain sorted data</td>
+                <td>Susceptible to clustering in some probing methods (e.g., linear probing)</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Common Uses</h2>
+    <ol>
+        <li><em>Databases (Indexing)</em>: Hash tables are widely used in databases to index records for fast lookups of data.</li>
+        <li><em>Caching</em>: Hash tables are used in caches to store frequently accessed data with quick access times (e.g., LRU Cache).</li>
+        <li><em>Dictionaries/Maps</em>: They are the underlying data structure for implementing associative arrays (dictionaries in Python, HashMap in Java, etc.).</li>
+        <li><em>Symbol Tables</em>: In compilers or interpreters, hash tables are used to store variable bindings.</li>
+        <li><em>Routing Tables</em>: Hash tables are used in networking to store and retrieve routes efficiently.</li>
+        <li><em>Sets</em>: In some programming languages, hash tables are used to implement sets, which support fast membership tests.</li>
+        <li><em>Counting Frequencies</em>: Hash tables can be used to count occurrences of items, such as words in a document.</li>
+    </ol>
+    
+    <h2>Implementations</h2>
+    <p><a href="https://github.com/mc-0/DSA/tree/main/src/datastructures/hashtables">Hash Tables</a></p>
+</body>
+</html>
